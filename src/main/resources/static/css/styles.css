@@ -2,8 +2,12 @@
 :root{
    --table_line_color:grey;
    --panel_color:grey;
+   --content_background:#ECE5DB;
 }
 /*-----------------------------------------Конец константы------------------*/
+html, body{
+height:100%;
+}
 
 /*---------------Top panel-------------------------------------*/
 .top{
@@ -44,7 +48,26 @@
 .menu_box:hover .menu_content {display: block;}
 .menu_box:hover .menu_box{background-color: #af2121;}
 /*-----------------Top panel Конец---------------------------------*/
+/*------------------Table entry control panel----------------------*/
+.table_entry_control_panel{
+   width:100%;
+   height:5%;
+   background-color:red;
+   display: flex;
+   flex-direction: row;
+}
+.button_form{
+   width:100%;
+}
+.button_panel{
+   width:100%;
+   height:100%;
+}
+/*------------------table entry control panel end------------------*/
+/*------------------Table------------------------------------------*/
 table{
+   width:100%;
+   height:auto;
    border-collapse: collapse;
    border: 2px solid var(--table_line_color);
 }
@@ -54,3 +77,17 @@ th {
  td {
    border: 1px solid var(--table_line_color);
 }
+/*---------------------------Table end------------------------------*/
+.center{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:flex-end;
+}
+/*---------------------------Content----------------------------*/
+.content_box{
+    width:80%;
+    height:100%;
+    background-color:var(--content_background);
+}
+/*---------------------------Content end------------------------*/

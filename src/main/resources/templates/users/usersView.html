@@ -8,7 +8,19 @@
 <body>
 <section th:replace="fragments/topPanelControl :: panel" />
 <section class="center">
-    <div>
+    <div class="content_box">
+        <div class="table_entry_control_panel">
+            <form class="button_form" th:action="@{/registration}">
+                <button class="button_panel">
+                    Добавить
+                </button>
+            </form>
+            <form class="button_form">
+                <button class="button_panel">
+                    Удалить
+                </button>
+            </form>
+        </div>
         <table >
             <caption>
                <h4>Пользователи</h4>

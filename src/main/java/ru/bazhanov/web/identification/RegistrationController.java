@@ -44,7 +44,7 @@ public class RegistrationController {
             mv.addObject("error", "Пользователь с таким именем уже существует");
             return mv;
         }
-        mv = new ModelAndView("login");
+        mv = new ModelAndView("redirect:/users");
         return mv;
     }
 }
