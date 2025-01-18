@@ -1,0 +1,36 @@
+:root{
+   --h_color:#af2121;
+   --error_color:red;
+   --table_line_color:grey;
+   --background_color:#EDE6DC;
+}
+
+body{
+   background:  url(../img/backgroundLogoNeiro+.png) var(--background_color);
+}
+
+.center{
+   margin-top:20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.input{
+   margin-top:10px;
+}
+.input_field{
+  width: 400px;
+  height: 50px;
+  font-size:30px;
+}
+
+.button_input{
+   width:400px;
+   height:50px;
+   font-size:30px
+}
+
+.identification{
+   margin-top:5%;
+}

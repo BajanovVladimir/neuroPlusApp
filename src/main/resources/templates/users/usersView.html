@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Нейро+</title>
+    <link rel="stylesheet" th:href="@{css/styles.css}" type="text/css"/>
+</head>
+<body>
+<section th:replace="fragments/topPanelControl :: panel" />
+<section class="center">
+    <div>
+        <table >
+            <caption>
+               <h4>Пользователи</h4>
+            </caption>
+            <thead>
+               <tr>
+                  <th>Имя</th>
+                  <th> Логин</th>
+                  <th> Роль </th>
+               </tr>
+            <thead/>
+            <tbody th:each="person:${listPersons}">
+               <tr>
+                  <td>
+                     <label th:text="${person.getName()}"></label>
+                  </td>
+                   <td>
+                     <label th:text="${person.getLogin()}"></label>
+                  </td>
+                   <td>
+                     <label th:text="${person.getRole()}"></label>
+                   </td>
+               </tr>
+            </tbody>
+        </table>
+        <div>
+            <a th:href="@{/registration}"> Зарегистрироваться </a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
