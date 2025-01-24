@@ -47,6 +47,13 @@ public class UserServiceImpl implements UserService {
         Optional<User> userFromDb = userRepository.findById(userId);
         return userFromDb.orElseThrow(RuntimeException::new);
     }
+    public User findUserByLogin(String login)throws UsernameNotFoundException {
+        User user = userRepository.findByLogin(login);
+        if (user == null) {
+            throw new UsernameNotFoundException("User not found");
+        }
+        return user;
+    }
 
     public List<User> allUsers() {
         return userRepository.findAll();
@@ -77,7 +84,7 @@ public class UserServiceImpl implements UserService {
         if(saveUser == null){
             return false;
         }
-        Person newPerson = new Person(registrationDto.getName(), saveUser);
+        Person newPerson = new Person(registrationDto.getPersonName(), saveUser);
         if(personRepository.save(newPerson) == null){
             return false;
         }

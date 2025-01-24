@@ -13,7 +13,7 @@ public class UserDaoImpl implements UserDao{
     public UserDTO getUserDTO(Person person ) {
         List<Role> userRoleList= person.getUser().getRoles().stream().toList();
         String userRole = userRoleList.get(0).getName();
-        UserDTO userDTO = new UserDTO(person.getName(), person.getUser().getLogin(), person.getUser().getPassword(), userRole);
+        UserDTO userDTO = new UserDTO(person.getUser().getId(),person.getName(), person.getUser().getLogin(), person.getUser().getPassword(), userRole);
         return userDTO;
     }
 

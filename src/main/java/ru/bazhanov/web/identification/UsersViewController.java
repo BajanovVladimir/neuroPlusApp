@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/users")
-public class UsersController {
+public class UsersViewController {
 
     @Autowired
     private PersonRepository personRepository;

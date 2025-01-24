@@ -1,18 +1,28 @@
 package ru.bazhanov.identification.dto;
 
 public class UserDTO {
-    String name;
-    String login;
-    String password;
-    String role;
+    private int userId = 0;
+    private String personName;
+    private String login;
+    private String password;
+    private String role;
 
    public UserDTO(){
     }
-    public UserDTO(String name,String login, String password, String role){
-       this.name = name;
+    public UserDTO(int userId, String personName,String login, String password, String role){
+       this.userId = userId;
+       this.personName = personName;
        this.login = login;
        this.password = password;
        this.role = role;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setId(int id) {
+        this.userId = id;
     }
 
     public String getRole() {
@@ -23,12 +33,12 @@ public class UserDTO {
         this.role = role;
     }
 
-    public String getName() {
-        return name;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPersonName(String name) {
+        this.personName = name;
     }
 
     public String getLogin() {

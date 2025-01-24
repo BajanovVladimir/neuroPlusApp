@@ -6,4 +6,5 @@ import ru.bazhanov.identification.model.User;
 
 public interface PersonRepository extends JpaRepository<Person, Integer> {
     Person findByUser(User user);
+
 }

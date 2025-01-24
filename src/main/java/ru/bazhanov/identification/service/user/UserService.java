@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface UserService extends UserDetailsService {
     Boolean save(UserDTO registrationDto);
+    User findUserById(Integer userId);
+    boolean deleteUser(Integer userId);
 
     List<User> allUsers();
 }

@@ -16,7 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/registration")
-public class RegistrationController {
+public class RegistrationViewController {
     @Autowired
     private UserService userService;
 

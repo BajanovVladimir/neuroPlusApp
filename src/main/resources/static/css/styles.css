@@ -84,6 +84,12 @@ th {
     display:flex;
     justify-content:flex-end;
 }
+.card_center{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+}
 /*---------------------------Content----------------------------*/
 .content_box{
     width:80%;

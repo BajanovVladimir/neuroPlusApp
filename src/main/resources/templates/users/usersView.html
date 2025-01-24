@@ -10,46 +10,95 @@
 <section class="center">
     <div class="content_box">
         <div class="table_entry_control_panel">
-            <form class="button_form" th:action="@{/registration}">
+            <form class="button_form" th:action="@{/registration}" th:method="get">
                 <button class="button_panel">
                     Добавить
                 </button>
             </form>
-            <form class="button_form">
-                <button class="button_panel">
-                    Удалить
-                </button>
-            </form>
+            <button id="showDialogButton" class="button_panel">Удалить</button>
         </div>
-        <table >
-            <caption>
-               <h4>Пользователи</h4>
-            </caption>
-            <thead>
-               <tr>
-                  <th>Имя</th>
-                  <th> Логин</th>
-                  <th> Роль </th>
-               </tr>
-            <thead/>
-            <tbody th:each="person:${listPersons}">
-               <tr>
-                  <td>
-                     <label th:text="${person.getName()}"></label>
-                  </td>
-                   <td>
-                     <label th:text="${person.getLogin()}"></label>
-                  </td>
-                   <td>
-                     <label th:text="${person.getRole()}"></label>
-                   </td>
-               </tr>
-            </tbody>
-        </table>
-        <div>
-            <a th:href="@{/registration}"> Зарегистрироваться </a>
-        </div>
+        <form id="userDeleteForm"  th:action="@{/userDelete}" method="post" >
+            <table >
+                <caption>
+                    <h4>Пользователи</h4>
+                </caption>
+                <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th> Логин</th>
+                    <th> Роль </th>
+                </tr>
+                <thead/>
+                <tbody th:each="person:${listPersons}">
+                <tr>
+                    <td>
+                        <input type="radio" id="*{person.getUserId()}" name="userId" th:value="*{person.getUserId()}"  />
+                        <label for="*{person.getUserId()}" th:text="*{person.getPersonName()}"></label>
+                    </td>
+                    <td>
+                        <label th:text="*{person.getLogin()}"></label>
+                    </td>
+                    <td>
+                        <label th:text="*{person.getRole()}"></label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
+    <dialog id="modalDeleteWindow">
+        <p> Удалить пользователя?</p>
+        <div class="table_entry_control_panel">
+            <button class="button_panel" id="buttonDelete">Удалить</button>
+            <button class="button_panel" id="buttonClose">Отменить</button>
+        </div>
+    </dialog>
+    <script th:inline="javascript" type="text/javascript">
+        const showDialogBtn = document.querySelector('#showDialogButton');
+        const modalDeleteWindow = document.querySelector('#modalDeleteWindow');
+        const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
+        const deleteBtn = document.querySelector('#buttonDelete');
+         showDialogBtn.addEventListener('click', () => {
+                   var nameRadio = document.getElementsByName('userId');
+                   var resultRadio = undefined;
+                   for (var i = 0; i < nameRadio.length; i++) {
+                        if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
+                            resultRadio = nameRadio[i].value;
+                        }
+                   }
+                   if(resultRadio != undefined){
+                       modalDeleteWindow.showModal();
+                    }
+
+
+         });
+
+         closeModalDeleteWindowBtn.addEventListener('click', () => {
+               modalDeleteWindow.close();
+         })
+
+         deleteBtn.addEventListener('click', () => {
+                 document.forms["userDeleteForm"].submit();
+         })
+
+         function radioSelected(){
+                   var nameRadio = document.getElementsByName('userId');
+                   var resultRadio = undefined;
+                   var selected = false;
+                   for (var i = 0; i < nameRadio.length; i++) {
+                        if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
+                            resultRadio = nameRadio[i].value;
+                        }
+                   }
+                   if(resultRadio != undefined){
+                       selected = !selected
+                    }
+                    return selected;
+         }
+
+
+
+    </script>
 </section>
 </body>
 </html>
