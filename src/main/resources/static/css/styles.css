@@ -3,6 +3,7 @@
    --table_line_color:grey;
    --panel_color:grey;
    --content_background:#ECE5DB;
+   --top_button_color: #79A0E8
 }
 /*-----------------------------------------Конец константы------------------*/
 html, body{
@@ -12,12 +13,19 @@ height:100%;
 /*---------------Top panel-------------------------------------*/
 .top{
    background:var(--panel_color);
+   display: flex;
+   flex-direction: row;
 }
 
-.top_box{
+.top_person_box{
    background:green;
    width: 10%;
    height: auto;
+}
+.top_button{
+   background:var(--top_button_color);
+   width:100%;
+   height:100%;
 }
 
 .menu_box {
@@ -58,6 +66,10 @@ height:100%;
 }
 .button_form{
    width:100%;
+   height:auto;
+   background-color:red;
+   display: flex;
+   flex-direction: row;
 }
 .button_panel{
    width:100%;

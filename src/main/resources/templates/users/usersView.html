@@ -58,46 +58,36 @@
         const modalDeleteWindow = document.querySelector('#modalDeleteWindow');
         const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
         const deleteBtn = document.querySelector('#buttonDelete');
-         showDialogBtn.addEventListener('click', () => {
-                   var nameRadio = document.getElementsByName('userId');
-                   var resultRadio = undefined;
-                   for (var i = 0; i < nameRadio.length; i++) {
-                        if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
-                            resultRadio = nameRadio[i].value;
-                        }
+
+        function radioSelected(){
+              var nameRadio = document.getElementsByName('userId');
+              var resultRadio = undefined;
+              var selected = false;
+              for (var i = 0; i < nameRadio.length; i++) {
+                   if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
+                         resultRadio = nameRadio[i].value;
                    }
-                   if(resultRadio != undefined){
-                       modalDeleteWindow.showModal();
-                    }
+              }
+              if(resultRadio != undefined){
+                  selected = true;
+              }
+              return selected;
+        }
 
+        showDialogBtn.addEventListener('click', () => {
+              if(radioSelected()){
+                 modalDeleteWindow.showModal();
+              }
 
-         });
+        });
 
-         closeModalDeleteWindowBtn.addEventListener('click', () => {
+        closeModalDeleteWindowBtn.addEventListener('click', () => {
                modalDeleteWindow.close();
-         })
+        })
 
-         deleteBtn.addEventListener('click', () => {
+        deleteBtn.addEventListener('click', () => {
                  document.forms["userDeleteForm"].submit();
-         })
-
-         function radioSelected(){
-                   var nameRadio = document.getElementsByName('userId');
-                   var resultRadio = undefined;
-                   var selected = false;
-                   for (var i = 0; i < nameRadio.length; i++) {
-                        if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
-                            resultRadio = nameRadio[i].value;
-                        }
-                   }
-                   if(resultRadio != undefined){
-                       selected = !selected
-                    }
-                    return selected;
-         }
-
-
-
+        })
     </script>
 </section>
 </body>

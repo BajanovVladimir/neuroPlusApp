@@ -7,7 +7,7 @@
 </head>
 <body>
 <section class="top" th:fragment="panel">
-    <div class="top_box">
+    <div class="top_person_box">
         <div>
             <p th:text="${personName}"></p>
         </div>
@@ -18,6 +18,18 @@
                 <a th:href="@{/users}"> Пользователи </a>
             </div>
         </div>
+    </div>
+    <div class="button_form">
+        <form class="button_form">
+            <button class="top_button">
+                Услуги
+            </button>
+        </form>
+        <form class="button_form">
+            <button class="top_button">
+               Сотрудники
+            </button>
+        </form>
     </div>
 </section>
 </body>

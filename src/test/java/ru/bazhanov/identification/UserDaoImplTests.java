@@ -30,7 +30,7 @@ public class UserDaoImplTests {
         List<Person> personList =  personRepository.findAll();
         List<UserDTO> userDTOList = userDao.getListUserDTO(personList);
         Assertions.assertEquals(personList.size(), userDTOList.size());
-        Assertions.assertEquals(personList.get(0).getName(), userDTOList.get(0).getName());
+        Assertions.assertEquals(personList.get(0).getName(), userDTOList.get(0).getPersonName());
         Assertions.assertEquals("ROLE_ADMIN", userDTOList.get(0).getRole());
     }
 }
