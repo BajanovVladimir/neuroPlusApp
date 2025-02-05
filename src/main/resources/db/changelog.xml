@@ -10,5 +10,8 @@
     <changeSet id="2" author="Bazhanov">
         <sqlFile path="db/changeset_created_user.sql"/>
     </changeSet>
+    <changeSet id="3" author="Bazhanov">
+    <sqlFile path="db/changeset_model_create_DB.sql"/>
+    </changeSet>
 
 </databaseChangeLog>
