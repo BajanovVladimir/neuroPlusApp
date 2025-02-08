@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created model classes and repositories for them">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/services/ServicesViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Moved the javascript project to a separate file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topPanelControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topPanelControl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/userDeleteView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738768782888</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Moved the javascript project to a separate file">
+      <created>1738989894371</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738989894371</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +249,8 @@
     <MESSAGE value="Added user deletion" />
     <MESSAGE value="Сreated a function to determine if the user is selected for the delete button" />
     <MESSAGE value="Created model classes and repositories for them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created model classes and repositories for them" />
+    <MESSAGE value="Moved the javascript project to a separate file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved the javascript project to a separate file" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

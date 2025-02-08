@@ -1,5 +1,5 @@
 const showDialogBtn = document.querySelector('#showDialogButton');
-const modalDeleteWindow = document.querySelector('#modalDeleteWindow');
+const modalDeleteWindow = document.querySelector('#modalDeleteWindowUsers');
 const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
 const deleteBtn = document.querySelector('#buttonDelete');
 

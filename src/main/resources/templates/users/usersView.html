@@ -46,49 +46,14 @@
             </table>
         </form>
     </div>
-    <dialog id="modalDeleteWindow">
+    <dialog id="modalDeleteWindowUsers">
         <p> Удалить пользователя?</p>
         <div class="table_entry_control_panel">
             <button class="button_panel" id="buttonDelete">Удалить</button>
             <button class="button_panel" id="buttonClose">Отменить</button>
         </div>
     </dialog>
-    <script th:inline="javascript" type="text/javascript">
-        const showDialogBtn = document.querySelector('#showDialogButton');
-        const modalDeleteWindow = document.querySelector('#modalDeleteWindow');
-        const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
-        const deleteBtn = document.querySelector('#buttonDelete');
-
-        function radioSelected(radioName){
-              var nameRadio = document.getElementsByName(radioName);
-              var resultRadio = undefined;
-              var selected = false;
-              for (var i = 0; i < nameRadio.length; i++) {
-                   if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
-                         resultRadio = nameRadio[i].value;
-                   }
-              }
-              if(resultRadio != undefined){
-                  selected = true;
-              }
-              return selected;
-        }
-
-        showDialogBtn.addEventListener('click', () => {
-              if(radioSelected('userId')){
-                 modalDeleteWindow.showModal();
-              }
-
-        });
-
-        closeModalDeleteWindowBtn.addEventListener('click', () => {
-               modalDeleteWindow.close();
-        })
-
-        deleteBtn.addEventListener('click', () => {
-                 document.forms["userDeleteForm"].submit();
-        })
-    </script>
+    <script  type="text/javascript" th:src="@{js/main.js}"></script>
 </section>
 </body>
 </html>
