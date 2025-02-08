@@ -7,8 +7,6 @@
     <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Moved the javascript project to a separate file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/userDeleteView.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738989894371</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Moved the javascript project to a separate file">
+      <created>1738999371969</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738999371969</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,6 +265,9 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/neuroPlusApp$Application.ic" NAME="Application Coverage Results" MODIFIED="1738999351231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.bazhanov.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/neuroPlusApp$UserDaoImplTests_test_that_detUserDTO_is_working.ic" NAME="UserDaoImplTests.test_that_detUserDTO_is_working Coverage Results" MODIFIED="1737187565982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

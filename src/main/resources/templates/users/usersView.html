@@ -15,9 +15,9 @@
                     Добавить
                 </button>
             </form>
-            <button id="showDialogButton" class="button_panel">Удалить</button>
+            <button id="showDialogButtonForUsers" class="button_panel">Удалить</button>
         </div>
-        <form id="userDeleteForm"  th:action="@{/userDelete}" method="post" >
+        <form id="userDeleteFormForUsers"  th:action="@{/userDelete}" method="post" >
             <table >
                 <caption>
                     <h4>Пользователи</h4>
@@ -32,7 +32,7 @@
                 <tbody th:each="person:${listPersons}">
                 <tr>
                     <td>
-                        <input type="radio" id="*{person.getUserId()}" name="userId" th:value="*{person.getUserId()}"  />
+                        <input type="radio" id="*{person.getUserId()}" name="userIdForUsers" th:value="*{person.getUserId()}"  />
                         <label for="*{person.getUserId()}" th:text="*{person.getPersonName()}"></label>
                     </td>
                     <td>
@@ -46,11 +46,11 @@
             </table>
         </form>
     </div>
-    <dialog id="modalDeleteWindowUsers">
+    <dialog id="modalDeleteWindowForUsers">
         <p> Удалить пользователя?</p>
         <div class="table_entry_control_panel">
-            <button class="button_panel" id="buttonDelete">Удалить</button>
-            <button class="button_panel" id="buttonClose">Отменить</button>
+            <button class="button_panel" id="buttonDeleteForUsers">Удалить</button>
+            <button class="button_panel" id="buttonCloseForUsers">Отменить</button>
         </div>
     </dialog>
     <script  type="text/javascript" th:src="@{js/main.js}"></script>

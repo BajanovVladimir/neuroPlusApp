@@ -1,7 +1,7 @@
-const showDialogBtn = document.querySelector('#showDialogButton');
-const modalDeleteWindow = document.querySelector('#modalDeleteWindowUsers');
-const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
-const deleteBtn = document.querySelector('#buttonDelete');
+const showDialogBtnForUsers = document.querySelector('#showDialogButtonForUsers');
+const modalDeleteWindowForUsers = document.querySelector('#modalDeleteWindowForUsers');
+const closeModalDeleteWindowBtnForUsers = document.querySelector('#buttonCloseForUsers');
+const deleteBtnForUsers = document.querySelector('#buttonDeleteForUsers');
 
 function radioSelected(radioName){
       var nameRadio = document.getElementsByName(radioName);
@@ -18,17 +18,33 @@ function radioSelected(radioName){
       return selected;
 }
 
-showDialogBtn.addEventListener('click', () => {
-      if(radioSelected('userId')){
-         modalDeleteWindow.showModal();
-      }
+function modalWindowShow(modalWindow, radioButtonName, button){
+     button.addEventListener('click', () => {
+           if(radioSelected(radioButtonName)){
+              modalWindow.showModal();
+           }
+     });
+}
 
-});
+function modalWindowClose(buttonClose, modalWindowClose){
+     buttonClose.addEventListener('click', () => {
+            modalWindowClose.close();
+     })
+}
 
-closeModalDeleteWindowBtn.addEventListener('click', () => {
-       modalDeleteWindow.close();
-})
+function modalWindowFormSubmit(button, form){
+   button.addEventListener('click', () => {
+             document.forms[form].submit();
+    })
+}
 
-deleteBtn.addEventListener('click', () => {
-         document.forms["userDeleteForm"].submit();
-})
+
+//-----------------------User------------------------------------
+
+modalWindowShow(modalDeleteWindowForUsers,'userIdForUsers',showDialogBtnForUsers);
+
+modalWindowClose(closeModalDeleteWindowBtnForUsers,modalDeleteWindowForUsers);
+
+//modalWindowFormSubmit(deleteBtnForUser,'userDeleteFormForUser');
+
+//---------------------End User----------------------------------
