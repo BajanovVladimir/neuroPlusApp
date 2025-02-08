@@ -24,9 +24,9 @@
                 </caption>
                 <thead>
                 <tr>
-                    <th>Имя</th>
-                    <th> Логин</th>
-                    <th> Роль </th>
+                    <th>Название</th>
+                    <th> Продолжительность, мин</th>
+                    <th> Цена, руб </th>
                 </tr>
                 <thead/>
                 <tbody th:each="person:${listPersons}">
@@ -46,6 +46,9 @@
             </table>
         </form>
     </div>
+    <dialog id="modalAddWindow">
+
+    </dialog>
     <dialog id="modalDeleteWindow">
         <p> Удалить пользователя?</p>
         <div class="table_entry_control_panel">
@@ -53,41 +56,9 @@
             <button class="button_panel" id="buttonClose">Отменить</button>
         </div>
     </dialog>
+    <script src='js/main.js'></script>
     <script th:inline="javascript" type="text/javascript">
-        const showDialogBtn = document.querySelector('#showDialogButton');
-        const modalDeleteWindow = document.querySelector('#modalDeleteWindow');
-        const closeModalDeleteWindowBtn = document.querySelector('#buttonClose');
-        const deleteBtn = document.querySelector('#buttonDelete');
 
-        function radioSelected(radioName){
-              var nameRadio = document.getElementsByName(radioName);
-              var resultRadio = undefined;
-              var selected = false;
-              for (var i = 0; i < nameRadio.length; i++) {
-                   if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
-                         resultRadio = nameRadio[i].value;
-                   }
-              }
-              if(resultRadio != undefined){
-                  selected = true;
-              }
-              return selected;
-        }
-
-        showDialogBtn.addEventListener('click', () => {
-              if(radioSelected('userId')){
-                 modalDeleteWindow.showModal();
-              }
-
-        });
-
-        closeModalDeleteWindowBtn.addEventListener('click', () => {
-               modalDeleteWindow.close();
-        })
-
-        deleteBtn.addEventListener('click', () => {
-                 document.forms["userDeleteForm"].submit();
-        })
     </script>
 </section>
 </body>

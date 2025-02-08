@@ -23,7 +23,7 @@ public class WebSecurityConfig {
         http.userDetailsService(userDetailsService)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/css/**", "/js/**", "/img/**").permitAll()
-                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/login","/services/**").permitAll()
                         .requestMatchers("/registration","/users/**").hasRole(Role.ROLE_ADMIN)
                         .requestMatchers("/").hasAnyRole(Role.ROLE_ADMIN,Role.ROLE_USER)
                         .anyRequest().authenticated()

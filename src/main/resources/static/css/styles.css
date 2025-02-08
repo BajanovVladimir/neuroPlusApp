@@ -77,17 +77,21 @@ height:100%;
 }
 /*------------------table entry control panel end------------------*/
 /*------------------Table------------------------------------------*/
+
 table{
    width:100%;
+   table-layout: fixed;
    height:auto;
    border-collapse: collapse;
    border: 2px solid var(--table_line_color);
 }
 th {
    border: 2px solid var(--table_line_color);
+   width:33.33%
 }
  td {
    border: 1px solid var(--table_line_color);
+   width:33.33%
 }
 /*---------------------------Table end------------------------------*/
 .center{
