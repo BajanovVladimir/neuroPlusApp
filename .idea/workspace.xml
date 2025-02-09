@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Moved the javascript project to a separate file">
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Redefined variables for usersView for javascript">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/usersViewJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users/usersView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,16 +75,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/Users/vladimirbazanov/IdeaProjects/neuroPlusApp/src/main/resources/templates/services"
+    "last_opened_file_path": "/Users/vladimirbazanov/IdeaProjects/neuroPlusApp/src/main/resources/static/js"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/services" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/src/main/resources/db" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/identification" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -228,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1738999371969</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Redefined variables for usersView for javascript">
+      <created>1739002397655</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739002397655</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,7 +265,8 @@
     <MESSAGE value="Сreated a function to determine if the user is selected for the delete button" />
     <MESSAGE value="Created model classes and repositories for them" />
     <MESSAGE value="Moved the javascript project to a separate file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved the javascript project to a separate file" />
+    <MESSAGE value="Redefined variables for usersView for javascript" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redefined variables for usersView for javascript" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

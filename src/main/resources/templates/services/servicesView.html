@@ -10,12 +10,8 @@
 <section class="center">
     <div class="content_box">
         <div class="table_entry_control_panel">
-            <form class="button_form" th:action="@{/registration}" th:method="get">
-                <button class="button_panel">
-                    Добавить
-                </button>
-            </form>
-            <button id="showDialogButton" class="button_panel">Удалить</button>
+            <button id="buttonAdd" class="button_panel">Добавить</button>
+            <button id="showDialogDeleteButtonForServices" class="button_panel">Удалить</button>
         </div>
         <form id="userDeleteForm"  th:action="@{/userDelete}" method="post" >
             <table >
@@ -47,7 +43,7 @@
         </form>
     </div>
     <dialog id="modalAddWindow">
-
+        <p> Добавить услугу</p>
     </dialog>
     <dialog id="modalDeleteWindow">
         <p> Удалить пользователя?</p>
@@ -55,8 +51,9 @@
             <button class="button_panel" id="buttonDelete">Удалить</button>
             <button class="button_panel" id="buttonClose">Отменить</button>
         </div>
+
     </dialog>
-    <script src='js/main.js'></script>
+    <script  type="module"  th:src="@{js/servicesViewJS.js}"></script>
 </section>
 </body>
 </html>

@@ -32,7 +32,7 @@
                 <tbody th:each="person:${listPersons}">
                 <tr>
                     <td>
-                        <input type="radio" id="*{person.getUserId()}" name="userIdForUsers" th:value="*{person.getUserId()}"  />
+                        <input type="radio" id="*{person.getUserId()}" name="userId" th:value="*{person.getUserId()}"  />
                         <label for="*{person.getUserId()}" th:text="*{person.getPersonName()}"></label>
                     </td>
                     <td>
@@ -53,7 +53,7 @@
             <button class="button_panel" id="buttonCloseForUsers">Отменить</button>
         </div>
     </dialog>
-    <script  type="text/javascript" th:src="@{js/main.js}"></script>
+    <script  type="text/javascript" th:src="@{js/usersViewJS.js}"></script>
 </section>
 </body>
 </html>
