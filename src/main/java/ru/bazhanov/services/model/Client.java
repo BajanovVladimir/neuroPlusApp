@@ -29,7 +29,7 @@ public class Client {
             joinColumns = @JoinColumn(name = "client_id"),
             inverseJoinColumns = @JoinColumn(name="service_id", nullable = false)
     )
-    private Set<Service> serviceSet;
+    private Set<OurService> serviceSet;
 
     @OneToMany(mappedBy = "client")
     private Set<Order> orderSet;
@@ -68,12 +68,12 @@ public class Client {
         this.deleted = deleted;
     }
 
-    public Set<Service> getServiceSet() {
+    public Set<OurService> getServiceSet() {
         return serviceSet;
     }
 
-    public void setServiceSet(Set<Service> serviceSet) {
-        this.serviceSet = serviceSet;
+    public void setServiceSet(Set<OurService> ourServiceSet) {
+        this.serviceSet = ourServiceSet;
     }
 
     public Set<Order> getOrderSet() {

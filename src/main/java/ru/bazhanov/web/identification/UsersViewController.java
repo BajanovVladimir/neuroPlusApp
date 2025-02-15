@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import ru.bazhanov.identification.dao.UserDao;
-import ru.bazhanov.identification.dao.UserDaoImpl;
+import ru.bazhanov.identification.dao.UserDAO;
+import ru.bazhanov.identification.dao.UserDAOImpl;
 import ru.bazhanov.identification.dto.UserDTO;
 import ru.bazhanov.identification.model.Person;
 import ru.bazhanov.identification.model.User;
@@ -22,7 +22,7 @@ public class UsersViewController {
 
     @Autowired
     private PersonRepository personRepository;
-    private final UserDao userDao = new UserDaoImpl();
+    private final UserDAO userDao = new UserDAOImpl();
 
     @GetMapping
     public ModelAndView showUsersView() {

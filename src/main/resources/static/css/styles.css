@@ -106,6 +106,17 @@ th {
     display:flex;
     justify-content:center;
 }
+/*-----------------------------------------------------------------*/
+.div_h{
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+}
+.div_input{
+    padding-bottom:2%;
+}
+/*------------------------------End--------------------------------*/
 /*---------------------------Content----------------------------*/
 .content_box{
     width:80%;

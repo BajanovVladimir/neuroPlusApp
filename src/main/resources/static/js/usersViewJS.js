@@ -33,6 +33,7 @@ function modalWindowShowIfRadioButtonSelected(modalWindow, radioButtonName, butt
 function modalWindowClose(buttonClose, modalWindowClose){
      console.log('function');
      buttonClose.addEventListener('click', () => {
+            console.log('button close')
             console.log(modalWindowClose);
             modalWindowClose.close();
      })
@@ -44,17 +45,14 @@ function modalWindowSubmit(button,form){
     })
 }
 
-
-//-----------------------User------------------------------------
 const showDialogBtnForUsers = document.querySelector('#showDialogButtonForUsers');
 const modalDeleteWindowForUsers = document.querySelector('#modalDeleteWindowForUsers');
 const closeModalDeleteWindowBtnForUsers = document.querySelector('#buttonCloseForUsers');
 const deleteBtnForUsers = document.querySelector('#buttonDeleteForUsers');
 
-modalWindowShowIfRadioButtonSelected(modalDeleteWindowForUsers,'userId',showDialogBtnForUsers);
+
+modalWindowShowIfRadioButtonSelected(modalDeleteWindowForUsers, 'userId', showDialogBtnForUsers);
 
 modalWindowClose(closeModalDeleteWindowBtnForUsers,modalDeleteWindowForUsers);
 
 modalWindowSubmit(deleteBtnForUsers,"userDeleteFormForUsers");
-
-//---------------------End User----------------------------------

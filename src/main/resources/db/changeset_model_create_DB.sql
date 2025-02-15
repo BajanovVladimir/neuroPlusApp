@@ -5,8 +5,8 @@
  DROP TABLE IF EXISTS public.types_of_order CASCADE;
  DROP SEQUENCE IF EXISTS public.types_of_order_id_seq;
 
- DROP TABLE IF EXISTS public.oder_statuses;
- DROP SEQUENCE IF EXISTS public.order_statuses_id_seq CASCADE;
+ DROP TABLE IF EXISTS public.oder_statuses CASCADE;
+ DROP SEQUENCE IF EXISTS public.order_statuses_id_seq ;
 
  DROP TABLE IF EXISTS public.services CASCADE;
  DROP SEQUENCE IF EXISTS public.services_id_seq;

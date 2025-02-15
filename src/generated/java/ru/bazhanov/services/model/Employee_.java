@@ -9,17 +9,17 @@ import javax.annotation.processing.Generated;
 @StaticMetamodel(Employee.class)
 public abstract class Employee_ {
 
+	public static volatile SetAttribute<Employee, OurService> ourServiceSet;
 	public static volatile SingularAttribute<Employee, Boolean> deleted;
 	public static volatile SetAttribute<Employee, Order> orderSet;
 	public static volatile SingularAttribute<Employee, String> name;
 	public static volatile SingularAttribute<Employee, Integer> id;
-	public static volatile SetAttribute<Employee, Service> serviceSet;
 
+	public static final String OUR_SERVICE_SET = "ourServiceSet";
 	public static final String DELETED = "deleted";
 	public static final String ORDER_SET = "orderSet";
 	public static final String NAME = "name";
 	public static final String ID = "id";
-	public static final String SERVICE_SET = "serviceSet";
 
 }
 

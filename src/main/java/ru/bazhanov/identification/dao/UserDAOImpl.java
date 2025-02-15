@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class UserDaoImpl implements UserDao{
+public class UserDAOImpl implements UserDAO {
 
     @Override
     public UserDTO getUserDTO(Person person ) {

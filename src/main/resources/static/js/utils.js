@@ -34,7 +34,7 @@ export function modalWindowShowIfRadioButtonSelected(modalWindow, radioButtonNam
 export function modalWindowClose(buttonClose, modalWindowClose){
      console.log('function');
      buttonClose.addEventListener('click', () => {
-            console.log(modalWindowClose);
+            console.log("button close");
             modalWindowClose.close();
      })
 }

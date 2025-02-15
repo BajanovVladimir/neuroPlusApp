@@ -14,7 +14,7 @@ public abstract class Client_ {
 	public static volatile SetAttribute<Client, Order> orderSet;
 	public static volatile SingularAttribute<Client, String> name;
 	public static volatile SingularAttribute<Client, Integer> id;
-	public static volatile SetAttribute<Client, Service> serviceSet;
+	public static volatile SetAttribute<Client, OurService> serviceSet;
 
 	public static final String DELETED = "deleted";
 	public static final String PHONE = "phone";

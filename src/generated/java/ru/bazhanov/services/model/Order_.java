@@ -10,7 +10,7 @@ import javax.annotation.processing.Generated;
 public abstract class Order_ {
 
 	public static volatile SingularAttribute<Order, LocalDateTime> date;
-	public static volatile SingularAttribute<Order, Service> service;
+	public static volatile SingularAttribute<Order, OurService> service;
 	public static volatile SingularAttribute<Order, Client> client;
 	public static volatile SingularAttribute<Order, Double> discount;
 	public static volatile SingularAttribute<Order, Integer> id;

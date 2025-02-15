@@ -5,7 +5,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "services")
-public class Service {
+public class OurService {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,13 +35,19 @@ public class Service {
     @ManyToMany(mappedBy = "serviceSet",cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
-    },fetch = FetchType.LAZY)
+    },fetch = FetchType.EAGER)
     private Set<Client> clientSet;
 
     @OneToMany(mappedBy = "service")
     private Set<Order> orderSet;
 
-    Service(){}
+    OurService(){}
+    public OurService(String name, Double price, int duration){
+        this.name = name;
+        this.price = price;
+        this.duration = duration;
+        this.deleted = false;
+    }
 
     public Integer getId() {
         return id;

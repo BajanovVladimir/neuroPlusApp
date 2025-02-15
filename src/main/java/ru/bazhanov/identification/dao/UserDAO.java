@@ -6,7 +6,7 @@ import ru.bazhanov.identification.model.Person;
 import java.util.List;
 
 
-public interface UserDao {
+public interface UserDAO {
       UserDTO getUserDTO(Person person);
       List<UserDTO> getListUserDTO(List<Person> personList);
 }

@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.bazhanov.identification.dao.UserDao;
-import ru.bazhanov.identification.dao.UserDaoImpl;
+import ru.bazhanov.identification.dao.UserDAO;
+import ru.bazhanov.identification.dao.UserDAOImpl;
 import ru.bazhanov.identification.dto.UserDTO;
 import ru.bazhanov.identification.model.Person;
 import ru.bazhanov.identification.repository.PersonRepository;
@@ -13,10 +13,10 @@ import ru.bazhanov.identification.repository.PersonRepository;
 import java.util.List;
 
 @SpringBootTest
-public class UserDaoImplTests {
+public class UserDAOImplTests {
     @Autowired
     private PersonRepository personRepository;
-    private UserDao userDao = new UserDaoImpl();
+    private UserDAO userDao = new UserDAOImpl();
 
 
     @Test

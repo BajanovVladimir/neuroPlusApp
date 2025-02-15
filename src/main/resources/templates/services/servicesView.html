@@ -11,9 +11,9 @@
     <div class="content_box">
         <div class="table_entry_control_panel">
             <button id="buttonAdd" class="button_panel">Добавить</button>
-            <button id="showDialogDeleteButtonForServices" class="button_panel">Удалить</button>
+            <button id="buttonOpenWindowDelete" class="button_panel">Удалить</button>
         </div>
-        <form id="userDeleteForm"  th:action="@{/userDelete}" method="post" >
+        <form id="servicesForm" th:action="@{/services/delete}" method="post">
             <table >
                 <caption>
                     <h4>Услуги</h4>
@@ -25,17 +25,17 @@
                     <th> Цена, руб </th>
                 </tr>
                 <thead/>
-                <tbody th:each="person:${listPersons}">
+                <tbody th:each="service:${serviceList}">
                 <tr>
                     <td>
-                        <input type="radio" id="*{person.getUserId()}" name="userId" th:value="*{person.getUserId()}"  />
-                        <label for="*{person.getUserId()}" th:text="*{person.getPersonName()}"></label>
+                        <input type="radio" id="*{service.getId()}" name="serviceId" th:value="*{service.getId()}"  />
+                        <label for="*{service.getId()}" th:text="*{service.getName()}"></label>
                     </td>
                     <td>
-                        <label th:text="*{person.getLogin()}"></label>
+                        <label th:text="*{service.getDuration()}"></label>
                     </td>
                     <td>
-                        <label th:text="*{person.getRole()}"></label>
+                        <label th:text="*{service.getPrice()}"></label>
                     </td>
                 </tr>
                 </tbody>
@@ -43,15 +43,27 @@
         </form>
     </div>
     <dialog id="modalAddWindow">
-        <p> Добавить услугу</p>
+        <div class="div_h">
+            <h1> Добавить услугу</h1>
+        </div>
+        <form id="serviceAddForm"  th:action="@{/services/add}" method="post" th:object="${serviceAddForm}"  >
+            <div class="div_input">
+                <label>Название:</label><input id="name_input" name="name"  th:field="*{name}" placeholder="Название"  required/>
+                <label>Продолжительность:</label><input id="duration_input" name="duration"   th:field="*{duration}" placeholder="Продолжительность"  required/>
+                <label>Цена:</label><input id="price_input" name="price"  th:field="*{price}" placeholder="Цена"  required/>
+            </div>
+            <div class="table_entry_control_panel">
+                <button class="button_panel" id="buttonAddService">Добавить</button>
+                <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
+            </div>
+        </form>
     </dialog>
     <dialog id="modalDeleteWindow">
-        <p> Удалить пользователя?</p>
+        <p> Удалить сервис?</p>
         <div class="table_entry_control_panel">
-            <button class="button_panel" id="buttonDelete">Удалить</button>
-            <button class="button_panel" id="buttonClose">Отменить</button>
+            <button class="button_panel" id="buttonDeleteService">Удалить</button>
+            <button class="button_panel" id="closeModalDeleteWindowBtn">Отменить</button>
         </div>
-
     </dialog>
     <script  type="module"  th:src="@{js/servicesViewJS.js}"></script>
 </section>

@@ -23,7 +23,7 @@ public class Employee {
             CascadeType.PERSIST,
             CascadeType.MERGE
     },fetch = FetchType.LAZY)
-    private Set<Service> serviceSet;
+    private Set<OurService> ourServiceSet;
 
     @OneToMany(mappedBy = "employee")
     private Set<Order> orderSet;
@@ -54,12 +54,12 @@ public class Employee {
         this.deleted = deleted;
     }
 
-    public Set<Service> getServiceSet() {
-        return serviceSet;
+    public Set<OurService> getServiceSet() {
+        return ourServiceSet;
     }
 
-    public void setServiceSet(Set<Service> serviceSet) {
-        this.serviceSet = serviceSet;
+    public void setServiceSet(Set<OurService> ourServiceSet) {
+        this.ourServiceSet = ourServiceSet;
     }
 
     public Set<Order> getOrderSet() {

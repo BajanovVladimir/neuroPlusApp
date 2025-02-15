@@ -22,7 +22,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "service_id")
-    private Service service;
+    private OurService service;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
@@ -65,11 +65,11 @@ public class Order {
         this.client = client;
     }
 
-    public Service getService() {
+    public OurService getService() {
         return service;
     }
 
-    public void setService(Service service) {
+    public void setService(OurService service) {
         this.service = service;
     }
 
