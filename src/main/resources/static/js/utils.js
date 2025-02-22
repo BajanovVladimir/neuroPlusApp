@@ -41,6 +41,17 @@ export function modalWindowClose(buttonClose, modalWindowClose){
 
 export function modalWindowSubmit(button,form){
    button.addEventListener('click', () => {
+      console.log("submit");
              document.forms[form].submit();
     })
+}
+
+export function doubleValidation(value){
+   return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+export function integerValidation(value){
+   var number = Number(value);
+   var valid = Number.isInteger(number);
+   return valid;
 }

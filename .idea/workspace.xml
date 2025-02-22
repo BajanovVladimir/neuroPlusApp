@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created utils.js with functions for use in html files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/dto/ServiceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/services/ServicesOurServiceImplTests.java" afterDir="false" />
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created adding and deleting services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Client_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Client_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Employee_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Employee_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Order_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Order_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Service_.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/dao/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/OurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/ServiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/identification/UserDeleteViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/identification/UserDeleteViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/identification/UsersViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/identification/UsersViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/services/ServicesViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/services/ServicesViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/usersViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/usersViewJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/identification/UserDaoImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/identification/UserDAOImplTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/services/ServicesOurServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/services/ServicesOurServiceImplTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +145,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ServicesOurServiceImplTests.test_that_delete_is_work_when_price_bad" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.services.ServicesOurServiceImplTests.test_that_delete_is_work_when_price_bad&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ServicesOurServiceImplTests.test_that_save_is_false_if_duration_is_bad" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,36 +214,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ServicesOurServiceImplTests.test_that_save_is_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.services.ServicesOurServiceImplTests.test_that_save_is_true&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_delete_is_work_when_price_bad" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_delete_is_work" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_save_is_false_if_duration_is_bad" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_save_is_false_if_price_is_bad" />
-        <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_save_is_true" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739088122157</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created adding and deleting services">
+      <created>1739618299657</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739618299657</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,14 +332,15 @@
     <MESSAGE value="Moved the javascript project to a separate file" />
     <MESSAGE value="Redefined variables for usersView for javascript" />
     <MESSAGE value="Created utils.js with functions for use in html files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created utils.js with functions for use in html files" />
+    <MESSAGE value="Created adding and deleting services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created adding and deleting services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java</url>
-          <line>52</line>
+          <line>54</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>

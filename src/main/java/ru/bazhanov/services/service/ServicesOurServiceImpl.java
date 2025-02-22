@@ -1,5 +1,6 @@
 package ru.bazhanov.services.service;
 
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,10 +49,15 @@ public class ServicesOurServiceImpl implements ServicesOurService {
     }
     @Transactional
     @Override
-    public void deleteById(int serviceId) {
-        OurService service = getById(serviceId);
-        service.setDeleted(true);
-        OurService newService = service;
-        serviceRepository.save(service);
+    public Boolean deleteById(int serviceId) {
+        try {
+            OurService service = getById(serviceId);
+            service.setDeleted(true);
+            OurService newService = service;
+            serviceRepository.save(service);
+            return true;
+        } catch (EntityNotFoundException e){
+            return false;
+        }
     }
 }

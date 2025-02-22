@@ -52,11 +52,11 @@
                 <label>Продолжительность:</label><input id="duration_input" name="duration"   th:field="*{duration}" placeholder="Продолжительность"  required/>
                 <label>Цена:</label><input id="price_input" name="price"  th:field="*{price}" placeholder="Цена"  required/>
             </div>
-            <div class="table_entry_control_panel">
-                <button class="button_panel" id="buttonAddService">Добавить</button>
-                <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
-            </div>
         </form>
+        <div class="table_entry_control_panel">
+            <button class="button_panel" id="buttonAddService">Добавить</button>
+            <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
+        </div>
     </dialog>
     <dialog id="modalDeleteWindow">
         <p> Удалить сервис?</p>

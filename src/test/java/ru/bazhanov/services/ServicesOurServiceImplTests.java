@@ -47,7 +47,7 @@ public class ServicesOurServiceImplTests {
         Assertions.assertEquals(size, servicesOurService.getAllServices().size());
     }
     @Test
-    public void test_that_delete_is_work(){
+    public void test_that_delete_is_true(){
         String name = "Service1";
         String price = "20.0";
         String duration = "10";
@@ -65,6 +65,25 @@ public class ServicesOurServiceImplTests {
         servicesOurService.deleteById(serviceId);
         serviceList = servicesOurService.getCurrentServices();
         Assertions.assertEquals(size-1, serviceList.size());
+
+    }
+    @Test
+    public void test_that_delete_is_false_when_price_is_bad(){
+        String name = "Service1";
+        String price = "20.0";
+        String duration = "10";
+        ServiceDTO serviceDTO = new ServiceDTO(name, duration, price);
+        servicesOurService.save(serviceDTO);
+        String name2 = "Service2";
+        String price2 = "40.0";
+        String duration2 = "40";
+        ServiceDTO serviceDTO2 = new ServiceDTO(name2, duration2, price2);
+        servicesOurService.save(serviceDTO2);
+        List<OurService> serviceList = servicesOurService.getCurrentServices();
+        int size = serviceList.size();
+        OurService service = serviceList.get(0);
+        int serviceId = 4;
+        Assertions.assertFalse(servicesOurService.deleteById(serviceId));
 
     }
     @Test

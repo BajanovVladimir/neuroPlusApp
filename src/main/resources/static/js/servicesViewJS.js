@@ -2,14 +2,29 @@ import {modalWindowShow} from './utils.js';
 import {modalWindowShowIfRadioButtonSelected} from './utils.js';
 import {modalWindowClose} from './utils.js';
 import {modalWindowSubmit} from './utils.js';
+import {doubleValidation} from './utils.js';
+import {integerValidation} from './utils.js';
 
 //-----------------------Service ADD------------------------------------
 const showDialogAddBtn = document.querySelector('#buttonAdd');
 const modalAddWindow = document.querySelector('#modalAddWindow');
-const closeModalAddWindowBtn = document.querySelector('#buttonModalAddWindowClose')
+const closeModalAddWindowBtn = document.querySelector('#buttonModalAddWindowClose');
+const addServiceBtn = document.querySelector('#buttonAddService');
+const formAddService = document.querySelector('#serviceAddForm');
+const buttonAddService = document.querySelector('#buttonAddService');
 
 modalWindowShow(modalAddWindow, showDialogAddBtn);
 modalWindowClose(closeModalAddWindowBtn, modalAddWindow);
+buttonAddService.addEventListener('click', () => {
+          var input_price = document.querySelector('#price_input').value;
+          var input_duration = document.querySelector('#duration_input').value;
+          if(doubleValidation(input_price) && integerValidation(input_duration)){
+             formAddService.submit();
+             return;
+          }
+          console.log("Validation false");
+ })
+
 
 //---------------------End Service ADD----------------------------------
 //---------------------Service delete-----------------------------------

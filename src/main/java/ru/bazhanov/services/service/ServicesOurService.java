@@ -10,6 +10,6 @@ public interface ServicesOurService {
     List<OurService> getAllServices();
     List<OurService> getCurrentServices();
     OurService getById(int serviceId);
-    void deleteById(int serviceId);
+    Boolean deleteById(int serviceId);
 
 }
