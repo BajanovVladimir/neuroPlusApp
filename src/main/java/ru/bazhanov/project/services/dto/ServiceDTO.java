@@ -1,4 +1,4 @@
-package ru.bazhanov.services.dto;
+package ru.bazhanov.project.services.dto;
 
 public class ServiceDTO {
     private int id = 0;
@@ -6,7 +6,7 @@ public class ServiceDTO {
     private String duration;
     private String price;
 
-    public ServiceDTO(){};
+    public ServiceDTO(){}
 
     public ServiceDTO(String name, String duration, String price){
         this.name = name;

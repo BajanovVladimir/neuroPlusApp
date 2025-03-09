@@ -11,7 +11,6 @@ const modalAddWindow = document.querySelector('#modalAddWindow');
 const closeModalAddWindowBtn = document.querySelector('#buttonModalAddWindowClose');
 const addServiceBtn = document.querySelector('#buttonAddService');
 const formAddService = document.querySelector('#serviceAddForm');
-const buttonAddService = document.querySelector('#buttonAddService');
 
 modalWindowShow(modalAddWindow, showDialogAddBtn);
 modalWindowClose(closeModalAddWindowBtn, modalAddWindow);

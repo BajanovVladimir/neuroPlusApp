@@ -1,4 +1,4 @@
-package ru.bazhanov.services.model;
+package ru.bazhanov.project.model;
 
 import jakarta.persistence.*;
 

@@ -4,12 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created adding and deleting services">
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added check for entering price and duration">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeesViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeesViewJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeesView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Client_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Employee_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/OrderStatus_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/Order_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/OurService_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/services/model/TypeOfOrder_.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/dto/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/services/dto/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/OurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/OurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/model/TypeOfOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/TypeOfOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/OrderStatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/OrderStatusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/repository/TypeOfOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/repository/TypeOfOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/services/service/ServicesOurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/services/service/ServicesOurServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/services/ServicesViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/services/ServicesViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/topPanelControl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/topPanelControl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/services/ServicesOurServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/services/ServicesOurServiceImplTests.java" afterDir="false" />
     </list>
@@ -74,11 +100,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "/Users/vladimirbazanov/IdeaProjects/neuroPlusApp/src/main/resources/static/js"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladimirbazanov/IdeaProjects/neuroPlusApp/src/main/resources/static/js&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
@@ -216,8 +242,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_delete_is_work_when_price_bad" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests" />
+        <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_delete_is_work_when_price_bad" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_delete_is_work" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_save_is_false_if_duration_is_bad" />
         <item itemvalue="Gradle.ServicesOurServiceImplTests.test_that_save_is_false_if_price_is_bad" />
@@ -303,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739618299657</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added check for entering price and duration">
+      <created>1740232202648</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740232202648</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,15 +366,21 @@
     <MESSAGE value="Redefined variables for usersView for javascript" />
     <MESSAGE value="Created utils.js with functions for use in html files" />
     <MESSAGE value="Created adding and deleting services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created adding and deleting services" />
+    <MESSAGE value="Added check for entering price and duration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added check for entering price and duration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/services/service/ServicesOurServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/project/services/service/ServicesOurServiceImpl.java</url>
           <line>54</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeesViewController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

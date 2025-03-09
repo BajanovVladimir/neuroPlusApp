@@ -1,7 +1,7 @@
-package ru.bazhanov.services.repository;
+package ru.bazhanov.project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.bazhanov.services.model.Client;
+import ru.bazhanov.project.model.Client;
 
 public interface ClientRepository extends JpaRepository<Client,Integer> {
 }

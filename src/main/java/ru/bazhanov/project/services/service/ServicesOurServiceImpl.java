@@ -1,12 +1,12 @@
-package ru.bazhanov.services.service;
+package ru.bazhanov.project.services.service;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.bazhanov.services.dto.ServiceDTO;
-import ru.bazhanov.services.model.OurService;
-import ru.bazhanov.services.repository.ServiceRepository;
+import ru.bazhanov.project.repository.ServiceRepository;
+import ru.bazhanov.project.services.dto.ServiceDTO;
+import ru.bazhanov.project.model.OurService;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import ru.bazhanov.identification.dto.UserDTO;
 import ru.bazhanov.identification.model.Person;
 import ru.bazhanov.identification.model.User;
 import ru.bazhanov.identification.repository.PersonRepository;
-import ru.bazhanov.services.dto.ServiceDTO;
-import ru.bazhanov.services.model.OurService;
-import ru.bazhanov.services.service.ServicesOurService;
+import ru.bazhanov.project.services.dto.ServiceDTO;
+import ru.bazhanov.project.model.OurService;
+import ru.bazhanov.project.services.service.ServicesOurService;
 
 import java.util.List;
 

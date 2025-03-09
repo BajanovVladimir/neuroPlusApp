@@ -1,7 +1,7 @@
-package ru.bazhanov.services.repository;
+package ru.bazhanov.project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.bazhanov.services.model.Order;
+import ru.bazhanov.project.model.Order;
 
 public interface OrderRepository extends JpaRepository<Order,Integer> {
 }

@@ -1,7 +1,7 @@
-package ru.bazhanov.services.service;
+package ru.bazhanov.project.services.service;
 
-import ru.bazhanov.services.dto.ServiceDTO;
-import ru.bazhanov.services.model.OurService;
+import ru.bazhanov.project.services.dto.ServiceDTO;
+import ru.bazhanov.project.model.OurService;
 
 import java.util.List;
 

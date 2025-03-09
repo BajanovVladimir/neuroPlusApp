@@ -1,4 +1,4 @@
-package ru.bazhanov.services.model;
+package ru.bazhanov.project.model;
 
 import jakarta.persistence.*;
 
@@ -17,7 +17,7 @@ public class Employee {
     private String name;
 
     @Column(name = "employee_deleted")
-    private Boolean deleted;
+    private Boolean deleted = false;
 
     @ManyToMany(mappedBy = "employeeSet",cascade = {
             CascadeType.PERSIST,
@@ -28,7 +28,7 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     private Set<Order> orderSet;
 
-    Employee(){}
+    public Employee(){}
 
     public Integer getId() {
         return id;

@@ -1,25 +1,26 @@
-package ru.bazhanov.services.model;
+package ru.bazhanov.project.model;
 
 import jakarta.persistence.*;
 
 import java.util.Set;
 
 @Entity
-@Table(name = "types_of_order")
-public class TypeOfOrder {
+@Table(name = "order_statuses")
+public class OrderStatus {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "type_id")
+    @Column(name = "status_id")
     private Integer id;
 
-    @Column(name = "type_name")
+    @Column(name = "status_name")
     private String name;
 
-    @OneToMany(mappedBy = "type")
-    Set<Order> orderSet;
+    @OneToMany(mappedBy = "status")
+    private Set<Order> orderSet;
 
-    TypeOfOrder(){}
+    OrderStatus(){}
 
     public Integer getId() {
         return id;
@@ -37,11 +38,11 @@ public class TypeOfOrder {
         this.name = name;
     }
 
-    public Set<Order> getOrderSet() {
+    public Set<Order> getStatusSet() {
         return orderSet;
     }
 
-    public void setOrderSet(Set<Order> orderSet) {
+    public void setStatusSet(Set<Order> orderSet) {
         this.orderSet = orderSet;
     }
 }

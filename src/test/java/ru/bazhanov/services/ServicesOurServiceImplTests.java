@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.bazhanov.services.dto.ServiceDTO;
-import ru.bazhanov.services.model.OurService;
-import ru.bazhanov.services.service.ServicesOurServiceImpl;
+import ru.bazhanov.project.services.dto.ServiceDTO;
+import ru.bazhanov.project.model.OurService;
+import ru.bazhanov.project.services.service.ServicesOurServiceImpl;
 
 import java.util.List;
 
