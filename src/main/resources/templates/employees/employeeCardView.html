@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Нейро+</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="stylesheet" th:href="@{css/styles.css}" type="text/css"/>
+</head>
+<body>
+<section th:replace="fragments/topPanelControl :: panel" />
+</section>
+<section class="card_center">
+    <form id="redirectEmployeesViewForm" th:action="@{/employees}" method="get">
+    </form>
+    <form id="deleteEmployeeForm" th:action="@{/employees/delete}" method="put">
+        <input type="hidden" name="employeeId" th:value="${employeeId}"/>
+    </form>
+    <div class="card">
+        <div>
+            <div class="table_entry_control_panel">
+                <button class="button_panel" id="deleteEmployeeBtn">Удалить</button>
+                <button class="button_panel" id="closeEmployeeCardBtn">Отменить</button>
+            </div>
+        </div>
+        <p>Сотрудник:</p>
+        <div class="div_h">
+            <h2 th:text="${employee.getName()}"></h2>
+        </div>
+        <label>Оказываемые услуги:</label>
+        <button id="serviceAddBtn">Добавить</button>
+    </div>
+</section>
+<dialog id="modalServiceAdd">
+    <div>
+        Услуги:
+        <form id="serviceAddForm">
+            <div th:each="service:${serviceList}">
+                <div>
+                    <input type="radio" id="*{service.getId()}" name="serviceId" th:value="*{service.getId()}"  />
+                    <label for="*{service.getId()}" th:text="*{service.getName()}"></label>
+                </div>
+            </div>
+        </form>
+        <div class="table_entry_control_panel">
+            <button class="button_panel" id="buttonAddService">Добавить</button>
+            <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
+        </div>
+    </div>
+</dialog>
+<script  type="module"  th:src="@{js/employeeCardViewJS.js}"></script>
+</body>
+</html>

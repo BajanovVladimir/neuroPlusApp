@@ -2,14 +2,10 @@ package ru.bazhanov.project.employees.dto;
 
 
 public class EmployeeDTO {
-    private Integer id;
+    private Integer id = 0;
     private String name;
 
     public EmployeeDTO(){}
-    public EmployeeDTO(Integer id, String name){
-        this.id = id;
-        this.name = name;
-    }
 
     public Integer getId() {
         return id;

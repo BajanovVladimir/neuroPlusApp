@@ -31,6 +31,14 @@ export function modalWindowShowIfRadioButtonSelected(modalWindow, radioButtonNam
      });
 }
 
+export function submitFormIfRadioButtonSelected(radioButton, form, submitButton){
+     submitButton.addEventListener('click', () => {
+         if(radioSelected(radioButton)){
+            form.submit();
+         }
+     })
+}
+
 export function modalWindowClose(buttonClose, modalWindowClose){
      console.log('function');
      buttonClose.addEventListener('click', () => {

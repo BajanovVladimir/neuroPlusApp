@@ -13,13 +13,33 @@
             <button id="buttonAdd" class="button_panel">Добавить</button>
             <button id="buttonOpenEmployeeCard" class="button_panel">Карточка сотрудника</button>
         </div>
+        <form id="employeesForm" th:action="@{/employeeCard}" method="get">
+            <table >
+                <caption>
+                    <h4>Сотрудники</h4>
+                </caption>
+                <thead>
+                <tr>
+                    <th>ФИО</th>
+                </tr>
+                <thead/>
+                <tbody th:each="employee:${employeeList}">
+                <tr>
+                    <td>
+                        <input type="radio" id="*{employee.getId()}" name="employeeId" th:value="*{employee.getId()}"/>
+                        <label for="*{employee.getId()}" th:text="*{employee.getName()}"></label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
 </section>
 <dialog id="modalAddWindow">
     <div class="div_h">
         <h1> Добавить сотрудника</h1>
     </div>
-    <form id="employeeAddForm"  th:action="@{/employees/add}" method="post" th:object="${employeeAddForm}"  >
+    <form id="employeeAddForm"  th:action="@{/employees/add}" method="post" th:object="${employeeAddForm}">
         <div class="div_input">
             <label>Сотрудник:</label><input id="name_input" name="name"  th:field="*{name}" placeholder="ФИО сотрудника"  required/>
         </div>

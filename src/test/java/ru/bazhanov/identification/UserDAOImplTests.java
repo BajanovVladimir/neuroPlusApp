@@ -20,13 +20,13 @@ public class UserDAOImplTests {
 
 
     @Test
-    public void test_that_detUserDTO_is_working(){
+    public void test_that_getUserDTO_is_working(){
         Person person =  personRepository.findAll().get(0);
         UserDTO userDTO = userDao.getUserDTO(person);
         Assertions.assertEquals("ROLE_ADMIN", userDTO.getRole());
     }
     @Test
-    public void test_that_detListUserDTO_is_working(){
+    public void test_that_getListUserDTO_is_working(){
         List<Person> personList =  personRepository.findAll();
         List<UserDTO> userDTOList = userDao.getListUserDTO(personList);
         Assertions.assertEquals(personList.size(), userDTOList.size());
