@@ -9,9 +9,13 @@ import {integerValidation} from './utils.js';
 const showWindowServiceAddBtn = document.querySelector('#serviceAddBtn');
 const windowServiceAdd = document.querySelector('#modalServiceAdd');
 const closeWindowServiceAddBtn = document.querySelector('#buttonModalAddWindowClose');
+const buttonAddService = document.querySelector('#buttonAddService');
+const serviceAddForm = document.querySelector('#serviceAddForm');
 
 modalWindowShow(windowServiceAdd, showWindowServiceAddBtn);
 modalWindowClose(closeWindowServiceAddBtn, windowServiceAdd);
+
+submitFormIfRadioButtonSelected('serviceId',serviceAddForm,buttonAddService);
 //-----------------------------End Service Add-----------------
 //-----------------------------EmployeeCard--------------------
 const redirectEmployeesViewForm = document.querySelector('#redirectEmployeesViewForm');
@@ -26,3 +30,4 @@ closeEmployeeCardBtn.addEventListener('click', () => {
 deleteEmployeeBtn.addEventListener('click', () => {
    deleteEmployeeForm.submit();
 });
+//-----------------------------End EmployeeCard------------------

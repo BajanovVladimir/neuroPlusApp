@@ -24,12 +24,10 @@ public class OurService {
     @Column(name = "service_deleted")
     private Boolean deleted;
 
-    @ManyToMany( fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "services_employees",
-            joinColumns = @JoinColumn(name = "service_id"),
-            inverseJoinColumns = @JoinColumn(name="employee_id", nullable = false)
-    )
+    @ManyToMany(mappedBy = "ourServiceSet",cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    },fetch = FetchType.LAZY)
     private Set<Employee> employeeSet;
 
     @ManyToMany(mappedBy = "serviceSet",cascade = {

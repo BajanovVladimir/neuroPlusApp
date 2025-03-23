@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added creation of a new employee">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeeCardViewJS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/employees/EmployeeServiceImplTests.java" afterDir="false" />
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added employee deletion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/dto/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/dto/EmployeeDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeesViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeesViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/employeesViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeesViewJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employeesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeesView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/identification/UserDAOImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/identification/UserDAOImplTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/OurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/OurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/employeeCardViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeeCardViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,29 +169,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ServicesOurServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.services.ServicesOurServiceImplTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="UserDAOImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,13 +192,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="neuroPlusApp [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.neuroPlusApp [testClasses]" />
         <item itemvalue="Gradle.EmployeeServiceImplTests" />
         <item itemvalue="Gradle.EmployeeServiceImplTests.test_that_save_is_OK" />
         <item itemvalue="Gradle.EmployeeServiceImplTests.test_that_not_save_if_employeeDTO_is_null" />
         <item itemvalue="Gradle.UserDAOImplTests" />
-        <item itemvalue="Gradle.ServicesOurServiceImplTests" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741514133306</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added employee deletion">
+      <created>1742646166770</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742646166770</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,15 +355,21 @@
     <MESSAGE value="Created adding and deleting services" />
     <MESSAGE value="Added check for entering price and duration" />
     <MESSAGE value="Added creation of a new employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added creation of a new employee" />
+    <MESSAGE value="Added employee deletion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added employee deletion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/project/services/service/ServicesOurServiceImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -19,10 +19,12 @@ public class Employee {
     @Column(name = "employee_deleted")
     private Boolean deleted = false;
 
-    @ManyToMany(mappedBy = "employeeSet",cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    },fetch = FetchType.LAZY)
+    @ManyToMany( fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "services_employees",
+            joinColumns = @JoinColumn(name = "employee_id"),
+            inverseJoinColumns = @JoinColumn(name="service_id", nullable = false)
+    )
     private Set<OurService> ourServiceSet;
 
     @OneToMany(mappedBy = "employee")

@@ -11,4 +11,5 @@ public interface EmployeesService {
    List<Employee> getCurrentEmployees();
    Boolean deleteById(int employeeId);
    Employee getById(int id);
+   Boolean serviceAddById(int employeeId, int serviceId);
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ru.bazhanov.identification.model.Person;
@@ -41,5 +42,15 @@ public class EmployeeCardViewController {
         mv.addObject("employeeId", employeeId);
         mv.addObject("serviceList", servicesOurService.getCurrentServices());
         return mv;
+    }
+
+    @RequestMapping("/employeeCard/serviceAdd")
+    public ModelAndView addServiceToEmployee(@RequestParam(value = "employeeId") int employeeId,
+                                             @RequestParam(value = "serviceId" ) int serviceId){
+        employeesService.serviceAddById(employeeId, serviceId);
+        Employee employee = employeesService.getById(employeeId);
+        ModelAndView mv = new ModelAndView("redirect:/employeeCard");
+        mv.addObject("employeeId", employeeId);
+        return  mv;
     }
 }

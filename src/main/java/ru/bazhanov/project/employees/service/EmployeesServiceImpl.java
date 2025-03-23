@@ -7,15 +7,22 @@ import ru.bazhanov.project.employees.dto.EmployeeDTO;
 import ru.bazhanov.project.model.Employee;
 import ru.bazhanov.project.model.OurService;
 import ru.bazhanov.project.repository.EmployeeRepository;
+import ru.bazhanov.project.repository.ServiceRepository;
+import ru.bazhanov.project.services.service.ServicesOurService;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
 public class EmployeesServiceImpl implements EmployeesService{
 
     @Autowired
-    EmployeeRepository employeeRepository;
+    private EmployeeRepository employeeRepository;
+
+    @Autowired
+    private ServicesOurService servicesOurService;
+
 
     @Override
     public Boolean save(EmployeeDTO employeeDTO) {
@@ -57,5 +64,16 @@ public class EmployeesServiceImpl implements EmployeesService{
     @Override
     public Employee getById(int id) {
         return employeeRepository.getReferenceById(id);
+    }
+
+    @Override
+    public Boolean serviceAddById(int employeeId, int serviceId) {
+       OurService service =  servicesOurService.getById(serviceId);
+       Employee employee = getById(employeeId);
+       Set<OurService> services = employee.getServiceSet();
+       services.add(service);
+       employee.setServiceSet(services);
+       employeeRepository.save(employee);
+       return true;
     }
 }
