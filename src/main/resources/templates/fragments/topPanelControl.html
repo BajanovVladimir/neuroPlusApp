@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Нейро+</title>
@@ -30,7 +30,7 @@
                Сотрудники
             </button>
         </form>
-        <form class="button_form">
+        <form class="button_form" th:action="@{/clients}" th:method="get">
             <button class="top_button">
                 Клиенты
             </button>

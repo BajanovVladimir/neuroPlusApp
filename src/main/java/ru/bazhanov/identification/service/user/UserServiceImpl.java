@@ -1,6 +1,7 @@
 package ru.bazhanov.identification.service.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -59,6 +60,23 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
+    @Override
+    public Person getPersonOfCurrentUser() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = ( principal instanceof User)? ((User) principal):new User();
+        return  personRepository.findByUser(user);
+    }
+
+    @Override
+    public Person getPersonOfUser(User user) {
+        return personRepository.findByUser(user);
+    }
+
+    @Override
+    public List<Person> getAllPersonsOfUsers() {
+        return personRepository.findAll();
+    }
+
 
     public boolean deleteUser(Integer userId) {
         if (userRepository.findById(userId).isPresent()) {
@@ -81,13 +99,8 @@ public class UserServiceImpl implements UserService {
         roles.add(role);
         newUser.setRoles(roles);
         User saveUser = userRepository.save(newUser);
-        if(saveUser == null){
-            return false;
-        }
         Person newPerson = new Person(registrationDto.getPersonName(), saveUser);
-        if(personRepository.save(newPerson) == null){
-            return false;
-        }
-        return  true;
+        personRepository.save(newPerson);
+        return true;
     }
 }

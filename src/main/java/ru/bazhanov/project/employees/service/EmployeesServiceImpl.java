@@ -7,7 +7,6 @@ import ru.bazhanov.project.employees.dto.EmployeeDTO;
 import ru.bazhanov.project.model.Employee;
 import ru.bazhanov.project.model.OurService;
 import ru.bazhanov.project.repository.EmployeeRepository;
-import ru.bazhanov.project.repository.ServiceRepository;
 import ru.bazhanov.project.services.service.ServicesOurService;
 
 import java.util.List;
@@ -31,10 +30,8 @@ public class EmployeesServiceImpl implements EmployeesService{
         }
         Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
-        if(employeeRepository.save(employee) == null){
-            return  false;
-        }
-        return true;
+        employeeRepository.save(employee);
+        return true ;
     }
 
     @Override
@@ -45,7 +42,7 @@ public class EmployeesServiceImpl implements EmployeesService{
     @Override
     public List<Employee> getCurrentEmployees() {
         return getAllEmployees().stream()
-                .filter(o -> (o.getDeleted() == false))
+                .filter(o -> (!o.getDeleted()))
                 .collect(Collectors.toList());
     }
 

@@ -1,7 +1,6 @@
 package ru.bazhanov.web.identification;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,9 +9,7 @@ import ru.bazhanov.identification.dao.UserDAO;
 import ru.bazhanov.identification.dao.UserDAOImpl;
 import ru.bazhanov.identification.dto.UserDTO;
 import ru.bazhanov.identification.model.Person;
-import ru.bazhanov.identification.model.User;
-import ru.bazhanov.identification.repository.PersonRepository;
-
+import ru.bazhanov.identification.service.user.UserService;
 import java.util.List;
 
 
@@ -21,15 +18,13 @@ import java.util.List;
 public class UsersViewController {
 
     @Autowired
-    private PersonRepository personRepository;
+    private UserService userService;
     private final UserDAO userDao = new UserDAOImpl();
 
     @GetMapping
     public ModelAndView showUsersView() {
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        User user = ( principal instanceof User)? ((User) principal):new User();
-        Person personUser = personRepository.findByUser(user);
-        List<UserDTO> allPersonsUser = userDao.getListUserDTO(personRepository.findAll());
+        Person personUser = userService.getPersonOfCurrentUser();
+        List<UserDTO> allPersonsUser = userDao.getListUserDTO(userService.getAllPersonsOfUsers());
         ModelAndView mv = new ModelAndView("users/usersView");
         mv.addObject("personName", personUser.getName());
         mv.addObject("listPersons", allPersonsUser);

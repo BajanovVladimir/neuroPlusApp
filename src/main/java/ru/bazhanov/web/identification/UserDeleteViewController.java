@@ -11,7 +11,6 @@ import ru.bazhanov.identification.dao.UserDAO;
 import ru.bazhanov.identification.dao.UserDAOImpl;
 import ru.bazhanov.identification.dto.UserDTO;
 import ru.bazhanov.identification.model.Person;
-import ru.bazhanov.identification.repository.PersonRepository;
 import ru.bazhanov.identification.service.user.UserService;
 
 @Controller
@@ -20,13 +19,12 @@ public class UserDeleteViewController {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private PersonRepository personRepository;
+
     private final UserDAO userDao = new UserDAOImpl();
 
     @GetMapping
     public ModelAndView showUserDeleteView(@RequestParam(value = "userId") int userId){
-        Person person = personRepository.findByUser(userService.findUserById(userId));
+        Person person = userService.getPersonOfUser(userService.findUserById(userId));
         UserDTO userDTO = new UserDAOImpl().getUserDTO(person);
         ModelAndView mv = new ModelAndView("/users/userDeleteView");
         mv.addObject("userDTO", userDTO);
@@ -36,7 +34,6 @@ public class UserDeleteViewController {
     @PostMapping
     public ModelAndView deleteUser(@RequestParam(value = "userId") int userId){
         userService.deleteUser(userId);
-        ModelAndView mv = new ModelAndView("redirect:/users");
-        return mv;
+        return new ModelAndView("redirect:/users");
     }
 }

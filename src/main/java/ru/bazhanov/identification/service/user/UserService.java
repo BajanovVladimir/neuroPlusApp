@@ -2,6 +2,7 @@ package ru.bazhanov.identification.service.user;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 import ru.bazhanov.identification.dto.UserDTO;
+import ru.bazhanov.identification.model.Person;
 import ru.bazhanov.identification.model.User;
 
 
@@ -13,4 +14,7 @@ public interface UserService extends UserDetailsService {
     boolean deleteUser(Integer userId);
 
     List<User> allUsers();
+    Person getPersonOfCurrentUser();
+    Person getPersonOfUser(User user);
+    List<Person> getAllPersonsOfUsers();
 }

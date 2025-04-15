@@ -2,6 +2,7 @@ package ru.bazhanov.project.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 
@@ -17,8 +18,11 @@ public class Client {
     @Column(name = "client_name")
     private String name;
 
-    @Column(name = "client_phone")
-    private String phone;
+    @Column(name = "client_date_of_birth")
+    private LocalDateTime dateOfBirth;
+
+    @OneToMany(mappedBy = "client")
+    private Set<Contact> contactSet;
 
     @Column(name = "client_deleted")
     private Boolean deleted;
@@ -34,7 +38,7 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private Set<Order> orderSet;
 
-    Client(){};
+    Client(){}
 
     public Integer getId() {
         return id;
@@ -52,12 +56,20 @@ public class Client {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public LocalDateTime getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDateOfBirth(LocalDateTime dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Set<Contact> getContactSet() {
+        return contactSet;
+    }
+
+    public void setContactSet(Set<Contact> contactSet) {
+        this.contactSet = contactSet;
     }
 
     public Boolean getDeleted() {

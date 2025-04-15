@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Нейро+</title>
+    <link rel="stylesheet" th:href="@{css/styles.css}" type="text/css"/>
+</head>
+<body>
+<section th:replace="fragments/topPanelControl :: panel" />
+<section class="center">
+    <div class="content_box">
+        <div class="table_entry_control_panel">
+            <button id="buttonAdd" class="button_panel">Добавить</button>
+            <button id="buttonOpenEmployeeCard" class="button_panel">Карточка клиента</button>
+        </div>
+    </div>
+</section>
+<dialog id="modalAddWindow">
+    <div class="div_h">
+        <h1> Добавить клиента</h1>
+    </div>
+    <div class="table_entry_control_panel">
+        <button class="button_panel" id="buttonAddEmployee">Добавить</button>
+        <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
+    </div>
+</dialog>
+<script  type="module"  th:src="@{js/contactsViewJS.js}"></script>
+</body>
+</html>

@@ -2,6 +2,9 @@
  DROP TABLE IF EXISTS public.clients CASCADE;
  DROP SEQUENCE IF EXISTS public.clients_id_seq;
 
+ DROP TABLE IF EXISTS public.contacts CASCADE;
+ DROP SEQUENCE IF EXISTS public.contacts_id_seq;
+
  DROP TABLE IF EXISTS public.types_of_order CASCADE;
  DROP SEQUENCE IF EXISTS public.types_of_order_id_seq;
 
@@ -23,18 +26,33 @@
  DROP TABLE IF EXISTS public.clients_services;
  DROP SEQUENCE IF EXISTS public.clients_services_id_seq;
  -- //------------------End Drops
-
  CREATE SEQUENCE public.clients_id_seq
      INCREMENT 1
      START WITH 1;
-
  CREATE TABLE IF NOT EXISTS public.clients
  (
      client_id integer NOT NULL DEFAULT nextval('clients_id_seq'),
      client_name varchar NOT NULL,
      client_phone varchar NOT NULL DEFAULT '+70000000000',
+ 	client_date_of_birth timestamp NOT NULL,
  	client_deleted boolean NOT NULL DEFAULT FALSE,
      CONSTRAINT clients_pkey PRIMARY KEY (client_id)
+ );
+
+ CREATE SEQUENCE public.contacts_id_seq
+     INCREMENT 1
+ 	START WITH 1;
+
+ CREATE TABLE IF NOT EXISTS public.contacts
+ (
+ 	contact_id integer NOT NULL DEFAULT nextval('contacts_id_seq'),
+ 	contact_name varchar NOT NULL,
+ 	contact_phone varchar NOT NULL,
+ 	client_id integer NOT NULL,
+ 	CONSTRAINT contacts_pkey PRIMARY KEY (contact_id),
+ 	CONSTRAINT contacts_clients_fkey
+ 	    FOREIGN KEY(client_id)
+ 	    REFERENCES public.clients(client_id)ON DELETE CASCADE
  );
 
  CREATE SEQUENCE public.types_of_order_id_seq

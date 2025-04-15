@@ -22,9 +22,7 @@ public class ServicesOurServiceImpl implements ServicesOurService {
         try{
             Double price = Double.parseDouble(serviceDTO.getPrice());
             int duration = Integer.parseInt(serviceDTO.getDuration());
-            if(serviceRepository.save(new OurService(name, price, duration)) == null){
-                return false;
-            }
+            serviceRepository.save(new OurService(name, price, duration));
             return true;
         }catch(NumberFormatException e){
             return false;
@@ -40,7 +38,7 @@ public class ServicesOurServiceImpl implements ServicesOurService {
     public List<OurService> getCurrentServices() {
         List<OurService> listAllServices = getAllServices();
         return getAllServices().stream()
-                               .filter(o -> (o.getDeleted() == false))
+                               .filter(o -> (!o.getDeleted()))
                                .collect(Collectors.toList());
     }
     @Override
@@ -53,7 +51,6 @@ public class ServicesOurServiceImpl implements ServicesOurService {
         try {
             OurService service = getById(serviceId);
             service.setDeleted(true);
-            OurService newService = service;
             serviceRepository.save(service);
             return true;
         } catch (EntityNotFoundException e){
