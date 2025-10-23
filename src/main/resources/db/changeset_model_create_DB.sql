@@ -33,6 +33,7 @@
  (
      client_id integer NOT NULL DEFAULT nextval('clients_id_seq'),
      client_name varchar NOT NULL,
+     client_surname varchar NOT NULL,
      client_phone varchar NOT NULL DEFAULT '+70000000000',
  	client_date_of_birth timestamp NOT NULL,
  	client_deleted boolean NOT NULL DEFAULT FALSE,

@@ -1,0 +1,63 @@
+package ru.bazhanov.project.clients.dto;
+
+import java.time.LocalDateTime;
+
+public class ClientDTO {
+    private int id = 0;
+    private String name;
+    private String surname;
+    private LocalDateTime dateOfBirthday;
+    private String contactName;
+    private String phone;
+
+
+    public ClientDTO(){}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDateTime getDateOfBirthday() {
+        return dateOfBirthday;
+    }
+
+    public void setDateOfBirthday(LocalDateTime dateOfBirthday) {
+        this.dateOfBirthday = dateOfBirthday;
+    }
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+}

@@ -21,13 +21,12 @@ public class EmployeesViewController {
     private EmployeesServiceImpl employeesService;
 
     @ModelAttribute("employeeAddForm")
-    public EmployeeDTO serviceAddDto() {
+    public EmployeeDTO employeeAddDto() {
         return new EmployeeDTO();
     }
 
     @GetMapping("/employees")
     public ModelAndView showEmployeesView(){
-
         Person personUser = userService.getPersonOfCurrentUser();
         ModelAndView mv = new ModelAndView("/employees/employeesView");
         mv.addObject("personName", personUser.getName());

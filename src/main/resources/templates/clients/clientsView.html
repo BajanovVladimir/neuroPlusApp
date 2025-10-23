@@ -11,19 +11,29 @@
     <div class="content_box">
         <div class="table_entry_control_panel">
             <button id="buttonAdd" class="button_panel">Добавить</button>
-            <button id="buttonOpenEmployeeCard" class="button_panel">Карточка клиента</button>
+            <button id="buttonOpenClientCard" class="button_panel">Карточка клиента</button>
         </div>
     </div>
 </section>
 <dialog id="modalAddWindow">
     <div class="div_h">
-        <h1> Добавить клиента</h1>
+        <h2> Добавить клиента</h2>
     </div>
+    <form id="clientAddForm"  th:action="@{/client/add}" method="post" th:object="${clientAddForm}">
+        <div class="div_input">
+            <label>Клиент:</label><input id="name_input" name="name"  th:field="*{name}" placeholder="ФИО клиента"  required/>
+            <label>Дата рождения:</label><input id="dateOfBirthday_input" type="date" name="dateOfBirth"  th:field="*{dateOfBirthday}" placeholder="Дата рождения"  required/>
+            <div class="div_h">
+                <h3> Контакты</h3>
+            </div>
+
+        </div>
+    </form>
     <div class="table_entry_control_panel">
-        <button class="button_panel" id="buttonAddEmployee">Добавить</button>
+        <button class="button_panel" id="buttonAddClient">Добавить</button>
         <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
     </div>
 </dialog>
-<script  type="module"  th:src="@{js/contactsViewJS.js}"></script>
+<script  type="module"  th:src="@{js/clientsViewJS.js}"></script>
 </body>
 </html>

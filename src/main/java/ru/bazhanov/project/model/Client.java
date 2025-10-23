@@ -18,6 +18,9 @@ public class Client {
     @Column(name = "client_name")
     private String name;
 
+    @Column(name = "client_surname")
+    private String surname;
+
     @Column(name = "client_date_of_birth")
     private LocalDateTime dateOfBirth;
 
@@ -52,12 +55,21 @@ public class Client {
         return name;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
 
     public LocalDateTime getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public void setDateOfBirth(LocalDateTime dateOfBirth) {
