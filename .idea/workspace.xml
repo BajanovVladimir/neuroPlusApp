@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added surname in Client.">
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created form for Client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,29 +121,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EmployeeServiceImplTests.test_that_not_save_if_employeeDTO_is_null" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.employees.EmployeeServiceImplTests.test_that_not_save_if_employeeDTO_is_null&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="EmployeeServiceImplTests.test_that_save_is_OK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,6 +165,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="neuroPlusApp [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="neuroPlusApp [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EmployeeServiceImplTests" />
         <item itemvalue="Gradle.neuroPlusApp [build]" />
+        <item itemvalue="Gradle.neuroPlusApp [clean]" />
+        <item itemvalue="Gradle.EmployeeServiceImplTests" />
         <item itemvalue="Gradle.neuroPlusApp [testClasses]" />
         <item itemvalue="Gradle.EmployeeServiceImplTests.test_that_save_is_OK" />
-        <item itemvalue="Gradle.EmployeeServiceImplTests.test_that_not_save_if_employeeDTO_is_null" />
       </list>
     </recent_temporary>
   </component>

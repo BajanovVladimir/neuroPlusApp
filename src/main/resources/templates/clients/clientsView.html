@@ -19,20 +19,19 @@
     <div class="div_h">
         <h2> Добавить клиента</h2>
     </div>
-    <form id="clientAddForm"  th:action="@{/client/add}" method="post" th:object="${clientAddForm}">
+    <form id="clientAddForm"  th:action="@{/clients/add}" method="post" th:object="${clientAddForm}">
         <div class="div_input">
             <div class="div_h">
                 <h3> Клиент:</h3>
             </div>
             <label>Фамилия:</label><input id="surname_input" name="surname"  th:field="*{surname}" placeholder="Фамилия клиента"  required/>
             <label>Имя:</label><input id="name_input" name="name"  th:field="*{name}" placeholder="Имя клиента"  required/>
-            <label>Дата рождения:</label><input id="dateOfBirthday_input" type="date" name="dateOfBirth"  th:field="*{dateOfBirthday}" placeholder="Дата рождения"  required/>
+            <label>Дата рождения:</label><input id="dateOfBirthday_input" type="date" name="dateOfBirthday"  th:field="*{dateOfBirthday}" placeholder="Дата рождения"  required/>
             <div class="div_h">
                 <h3> Контакты</h3>
             </div>
             <label>Название:</label><input id="contact_name_input" name="contact_name"  th:field="*{contactName}" placeholder="Название:"  required/>
             <label>Телефон:</label><input id="phone_input" name="phone"  th:field="*{phone}" placeholder="Телефон:"  required/>
-
         </div>
     </form>
     <div class="table_entry_control_panel">

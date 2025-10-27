@@ -35,7 +35,7 @@
      client_name varchar NOT NULL,
      client_surname varchar NOT NULL,
      client_phone varchar NOT NULL DEFAULT '+70000000000',
- 	client_date_of_birth timestamp NOT NULL,
+ 	client_date_of_birth date NOT NULL,
  	client_deleted boolean NOT NULL DEFAULT FALSE,
      CONSTRAINT clients_pkey PRIMARY KEY (client_id)
  );

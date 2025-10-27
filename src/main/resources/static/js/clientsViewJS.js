@@ -10,10 +10,12 @@ import {integerValidation} from './utils.js';
 const showDialogAddBtn = document.querySelector('#buttonAdd');
 const modalAddWindow = document.querySelector('#modalAddWindow');
 const closeModalAddWindowBtn = document.querySelector('#buttonModalAddWindowClose');
+const formAddClient = document.querySelector('#clientAddForm');
+const addClientBtn = document.querySelector('#buttonAddClient');
 
 modalWindowShow(modalAddWindow, showDialogAddBtn);
 modalWindowClose(closeModalAddWindowBtn, modalAddWindow);
-addEmployeeBtn.addEventListener('click', () => {
-   formAddEmployee.submit();
+addClientBtn.addEventListener('click', () => {
+   formAddClient.submit();
 });
 //------------------------------End client add-----------------

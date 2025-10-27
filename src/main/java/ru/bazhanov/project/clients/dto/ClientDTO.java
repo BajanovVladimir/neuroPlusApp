@@ -1,12 +1,12 @@
 package ru.bazhanov.project.clients.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class ClientDTO {
     private int id = 0;
     private String name;
     private String surname;
-    private LocalDateTime dateOfBirthday;
+    private LocalDate dateOfBirthday;
     private String contactName;
     private String phone;
 
@@ -29,11 +29,11 @@ public class ClientDTO {
         this.name = name;
     }
 
-    public LocalDateTime getDateOfBirthday() {
+    public LocalDate getDateOfBirthday() {
         return dateOfBirthday;
     }
 
-    public void setDateOfBirthday(LocalDateTime dateOfBirthday) {
+    public void setDateOfBirthday(LocalDate dateOfBirthday) {
         this.dateOfBirthday = dateOfBirthday;
     }
     public String getSurname() {
