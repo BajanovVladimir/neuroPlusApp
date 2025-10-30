@@ -3,7 +3,7 @@ package ru.bazhanov.project.model;
 import jakarta.persistence.metamodel.SetAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import javax.annotation.processing.Generated;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
@@ -15,7 +15,7 @@ public abstract class Client_ {
 	public static volatile SetAttribute<Client, Order> orderSet;
 	public static volatile SingularAttribute<Client, String> surname;
 	public static volatile SingularAttribute<Client, String> name;
-	public static volatile SingularAttribute<Client, LocalDateTime> dateOfBirth;
+	public static volatile SingularAttribute<Client, LocalDate> dateOfBirth;
 	public static volatile SingularAttribute<Client, Integer> id;
 	public static volatile SetAttribute<Client, OurService> serviceSet;
 

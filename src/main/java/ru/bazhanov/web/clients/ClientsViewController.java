@@ -9,12 +9,16 @@ import org.springframework.web.servlet.ModelAndView;
 import ru.bazhanov.identification.model.Person;
 import ru.bazhanov.identification.service.user.UserService;
 import ru.bazhanov.project.clients.dto.ClientDTO;
+import ru.bazhanov.project.clients.service.ClientsService;
+import ru.bazhanov.project.model.Client;
 
 @Controller
 public class ClientsViewController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private ClientsService clientsService;
 
     @ModelAttribute("clientAddForm")
     private ClientDTO clientAddDTO(){return new ClientDTO();}
@@ -28,6 +32,8 @@ public class ClientsViewController {
 
     @RequestMapping("/clients/add")
     public ModelAndView addClient(@ModelAttribute("clientAddForm") ClientDTO clientDTO){
+        Client saveClient = clientsService.save(clientDTO);
+
         return new ModelAndView("redirect:/clients");
     }
 }

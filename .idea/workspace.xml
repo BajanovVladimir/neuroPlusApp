@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created form for Client">
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created method addClient in ClientsViewController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/contacts/service/ContactsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/contacts/service/ContactsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/clients/ClientsServiceImplTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/ContactsServiceImplTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/project/model/Client_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/project/model/Client_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +106,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="EmployeeServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientsServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -111,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.employees.EmployeeServiceImplTests&quot;" />
+            <option value="&quot;ru.bazhanov.clients.ClientsServiceImplTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -121,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EmployeeServiceImplTests.test_that_save_is_OK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientsServiceImplTests.test_that_client" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.employees.EmployeeServiceImplTests.test_that_save_is_OK&quot;" />
+            <option value="&quot;ru.bazhanov.clients.ClientsServiceImplTests.test_that_client&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -144,76 +152,82 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="neuroPlusApp [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientsServiceImplTests.test_that_client_not_save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.clients.ClientsServiceImplTests.test_that_client_not_save&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="neuroPlusApp [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientsServiceImplTests.test_that_client_save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.clients.ClientsServiceImplTests.test_that_client_save&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="neuroPlusApp [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactsServiceImplTests.test_that_contact_save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="testClasses" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.ContactsServiceImplTests.test_that_contact_save&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.neuroPlusApp [build]" />
-        <item itemvalue="Gradle.neuroPlusApp [clean]" />
-        <item itemvalue="Gradle.EmployeeServiceImplTests" />
-        <item itemvalue="Gradle.neuroPlusApp [testClasses]" />
-        <item itemvalue="Gradle.EmployeeServiceImplTests.test_that_save_is_OK" />
+        <item itemvalue="Gradle.ClientsServiceImplTests" />
+        <item itemvalue="Gradle.ClientsServiceImplTests.test_that_client_not_save" />
+        <item itemvalue="Gradle.ClientsServiceImplTests.test_that_client" />
+        <item itemvalue="Gradle.ClientsServiceImplTests.test_that_client_save" />
+        <item itemvalue="Gradle.ContactsServiceImplTests.test_that_contact_save" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761232153912</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Created method addClient in ClientsViewController">
+      <created>1761580409466</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761580409466</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,7 +395,8 @@
     <MESSAGE value="Сreated an addition of a service to an employee" />
     <MESSAGE value="Added transition to the clients page. Added work with user personalities to UserService" />
     <MESSAGE value="Added surname in Client." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added surname in Client." />
+    <MESSAGE value="Created method addClient in ClientsViewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created method addClient in ClientsViewController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,6 +416,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="ru.bazhanov.identification.model.User" memberName="login" />
+        <PinnedItemInfo parentTag="ru.bazhanov.project.model.Client" memberName="surname" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

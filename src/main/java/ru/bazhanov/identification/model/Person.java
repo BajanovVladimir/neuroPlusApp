@@ -16,8 +16,6 @@ public class Person {
     @JoinColumn(name = "user_id",nullable = false)
     private User user;
 
-
-
     Person(){}
 
     public Person(String name, User user){

@@ -35,8 +35,8 @@
      client_name varchar NOT NULL,
      client_surname varchar NOT NULL,
      client_phone varchar NOT NULL DEFAULT '+70000000000',
- 	client_date_of_birth date NOT NULL,
- 	client_deleted boolean NOT NULL DEFAULT FALSE,
+ 	 client_date_of_birth date NOT NULL,
+ 	 client_deleted boolean NOT NULL DEFAULT FALSE,
      CONSTRAINT clients_pkey PRIMARY KEY (client_id)
  );
 
@@ -49,7 +49,7 @@
  	contact_id integer NOT NULL DEFAULT nextval('contacts_id_seq'),
  	contact_name varchar NOT NULL,
  	contact_phone varchar NOT NULL,
- 	client_id integer NOT NULL,
+ 	client_id integer  DEFAULT 0,
  	CONSTRAINT contacts_pkey PRIMARY KEY (contact_id),
  	CONSTRAINT contacts_clients_fkey
  	    FOREIGN KEY(client_id)

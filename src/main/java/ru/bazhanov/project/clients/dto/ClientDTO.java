@@ -3,7 +3,6 @@ package ru.bazhanov.project.clients.dto;
 import java.time.LocalDate;
 
 public class ClientDTO {
-    private int id = 0;
     private String name;
     private String surname;
     private LocalDate dateOfBirthday;
@@ -13,13 +12,6 @@ public class ClientDTO {
 
     public ClientDTO(){}
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

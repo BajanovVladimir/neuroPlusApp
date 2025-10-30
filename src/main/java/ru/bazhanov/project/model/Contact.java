@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "contact_id")
     private int id;
 
     @Column(name = "contact_name")
@@ -20,7 +21,7 @@ public class Contact {
     private Client client;
 
 
-    Contact(){}
+    public Contact(){}
 
     public int getId() {
         return id;
