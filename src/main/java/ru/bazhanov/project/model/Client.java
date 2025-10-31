@@ -2,6 +2,7 @@ package ru.bazhanov.project.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -112,5 +113,9 @@ public class Client {
 
     public void setOrderSet(Set<Order> orderSet) {
         this.orderSet = orderSet;
+    }
+
+    public long getAge(){
+        return ChronoUnit.YEARS.between(this.dateOfBirth,LocalDate.now());
     }
 }

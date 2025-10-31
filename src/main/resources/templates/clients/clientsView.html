@@ -13,6 +13,31 @@
             <button id="buttonAdd" class="button_panel">Добавить</button>
             <button id="buttonOpenClientCard" class="button_panel">Карточка клиента</button>
         </div>
+        <form id="clientForm" th:action="@{/clientCard}" method="get">
+            <table >
+                <caption>
+                    <h4>Клиенты</h4>
+                </caption>
+                <thead>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Возраст, лет</th>
+                </tr>
+                <thead/>
+                <tbody th:each="client:${clientList}">
+                <tr>
+                    <td>
+                        <input type="radio" id="*{client.getId()}" name="clientId" th:value="*{client.getId()}"/>
+                        <label for="*{client.getId()}" th:text="*{client.getSurname()}"></label>
+                        <label for="*{client.getId()}" th:text="*{client.getName()}"></label>
+                    </td>
+                    <td>
+                        <label for="*{client.getId()}" th:text="*{client.getAge()}"></label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
 </section>
 <dialog id="modalAddWindow">

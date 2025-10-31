@@ -27,6 +27,7 @@ public class ClientsViewController {
         Person personUser = userService.getPersonOfCurrentUser();
         ModelAndView mv = new ModelAndView("/clients/clientsView");
         mv.addObject("personName", personUser.getName());
+        mv.addObject("clientList", clientsService.getAllClients());
         return mv;
     }
 

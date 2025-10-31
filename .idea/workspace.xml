@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created method addClient in ClientsViewController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/contacts/service/ContactsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/contacts/service/ContactsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/clients/ClientsServiceImplTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/ContactsServiceImplTests.java" afterDir="false" />
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Created a client addition.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/project/model/Client_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/project/model/Client_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/identification/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/dto/ClientDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset_model_create_DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761580409466</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Created a client addition.">
+      <created>1761839946205</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1761839946205</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,7 +394,8 @@
     <MESSAGE value="Added transition to the clients page. Added work with user personalities to UserService" />
     <MESSAGE value="Added surname in Client." />
     <MESSAGE value="Created method addClient in ClientsViewController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created method addClient in ClientsViewController" />
+    <MESSAGE value="Created a client addition." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a client addition." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
