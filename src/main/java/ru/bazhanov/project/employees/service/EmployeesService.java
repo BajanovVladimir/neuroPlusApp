@@ -12,4 +12,5 @@ public interface EmployeesService {
    Boolean deleteById(int employeeId);
    Employee getById(int id);
    Boolean serviceAddById(int employeeId, int serviceId);
+   Boolean serviceRemoveById(int employeeId, int serviceId);
 }

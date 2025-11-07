@@ -12,14 +12,14 @@
 <section class="card_center">
     <form id="redirectEmployeesViewForm" th:action="@{/employees}" method="get">
     </form>
-    <form id="deleteEmployeeForm" th:action="@{/employees/delete}" method="put">
+    <form id="deleteEmployeeForm" th:action="@{/employees/delete}" method="post">
         <input type="hidden" name="employeeId" th:value="${employeeId}"/>
     </form>
     <div class="card">
         <div>
             <div class="table_entry_control_panel">
                 <button class="button_panel" id="deleteEmployeeBtn">Удалить</button>
-                <button class="button_panel" id="closeEmployeeCardBtn">Отменить</button>
+                <button class="button_panel" id="closeEmployeeCardBtn">Выйти</button>
             </div>
         </div>
         <p>Сотрудник:</p>
@@ -28,9 +28,14 @@
         </div>
         <label>Оказываемые услуги:</label>
         <button id="serviceAddBtn">Добавить</button>
-        <div th:each="service:${employee.getServiceSet}">
-            <label th:text="*{service.getName()}"></label>
-        </div>
+        <button id="serviceRemoveBtn">Удалить</button>
+        <form id="removeServiceForm" th:action="@{/employeeCard/serviceRemove}" method="post">
+            <input type="hidden" name="employeeId" th:value="${employeeId}"/>
+            <div th:each="service:${employee.getServiceSet}">
+                <input type="radio"  name="serviceRemoveId" th:value="*{service.getId()}"/>
+                <label th:text="*{service.getName()}"></label>
+            </div>
+        </form>
     </div>
 </section>
 <dialog id="modalServiceAdd">
@@ -40,14 +45,14 @@
             <input type="hidden" name="employeeId" th:value="${employeeId}"/>
             <div th:each="service:${serviceList}">
                 <div>
-                    <input type="radio" id="*{service.getId()}" name="serviceId" th:value="*{service.getId()}"  />
+                    <input type="radio" id="*{service.getId()}" name="serviceId" th:value="*{service.getId()}"/>
                     <label for="*{service.getId()}" th:text="*{service.getName()}"></label>
                 </div>
             </div>
         </form>
         <div class="table_entry_control_panel">
             <button class="button_panel" id="buttonAddService">Добавить</button>
-            <button class="button_panel" id="buttonModalAddWindowClose">Отменить</button>
+            <button class="button_panel" id="buttonModalAddWindowClose">Выйти</button>
         </div>
     </div>
 </dialog>

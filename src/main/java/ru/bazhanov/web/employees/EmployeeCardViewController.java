@@ -45,4 +45,13 @@ public class EmployeeCardViewController {
         mv.addObject("employeeId", employeeId);
         return  mv;
     }
+
+    @RequestMapping("/employeeCard/serviceRemove")
+    public ModelAndView removeServiceToEmployee(@RequestParam(value = "employeeId") int employeeId,
+                                                @RequestParam(value = "serviceRemoveId" ) int serviceId){
+        employeesService.serviceRemoveById(employeeId, serviceId);
+        ModelAndView mv = new ModelAndView("redirect:/employeeCard");
+        mv.addObject("employeeId", employeeId);
+        return mv;
+    }
 }

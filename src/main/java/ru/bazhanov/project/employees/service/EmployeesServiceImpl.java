@@ -73,4 +73,16 @@ public class EmployeesServiceImpl implements EmployeesService{
        employeeRepository.save(employee);
        return true;
     }
+
+
+    @Override
+    public Boolean serviceRemoveById(int employeeId, int serviceId) {
+       OurService service =  servicesOurService.getById(serviceId);
+       Employee employee = getById(employeeId);
+       Set<OurService> services = employee.getServiceSet();
+       services.remove(service);
+       employee.setServiceSet(services);
+       employeeRepository.save(employee);
+       return true;
+    }
 }

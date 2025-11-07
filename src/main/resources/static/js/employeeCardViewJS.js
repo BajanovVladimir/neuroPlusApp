@@ -14,9 +14,15 @@ const serviceAddForm = document.querySelector('#serviceAddForm');
 
 modalWindowShow(windowServiceAdd, showWindowServiceAddBtn);
 modalWindowClose(closeWindowServiceAddBtn, windowServiceAdd);
-
 submitFormIfRadioButtonSelected('serviceId',serviceAddForm,buttonAddService);
 //-----------------------------End Service Add-----------------
+
+//-----------------------------Service remove------------------
+const serviceRemoveForm = document.querySelector('#removeServiceForm');
+const serviceRemoveBtn = document.querySelector('#serviceRemoveBtn');
+submitFormIfRadioButtonSelected('serviceRemoveId', serviceRemoveForm, serviceRemoveBtn);
+//-----------------------------End Service remove--------------
+
 //-----------------------------EmployeeCard--------------------
 const redirectEmployeesViewForm = document.querySelector('#redirectEmployeesViewForm');
 const closeEmployeeCardBtn = document.querySelector('#closeEmployeeCardBtn');
@@ -26,7 +32,6 @@ const deleteEmployeeBtn = document.querySelector('#deleteEmployeeBtn');
 closeEmployeeCardBtn.addEventListener('click', () => {
    redirectEmployeesViewForm.submit();
 });
-
 deleteEmployeeBtn.addEventListener('click', () => {
    deleteEmployeeForm.submit();
 });

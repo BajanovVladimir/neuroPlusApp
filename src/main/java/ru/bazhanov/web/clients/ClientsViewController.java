@@ -34,7 +34,6 @@ public class ClientsViewController {
     @RequestMapping("/clients/add")
     public ModelAndView addClient(@ModelAttribute("clientAddForm") ClientDTO clientDTO){
         Client saveClient = clientsService.save(clientDTO);
-
         return new ModelAndView("redirect:/clients");
     }
 }
