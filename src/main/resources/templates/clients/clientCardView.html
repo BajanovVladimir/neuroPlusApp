@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Нейро+</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <link rel="stylesheet" th:href="@{css/styles.css}" type="text/css"/>
+</head>
+<body>
+<section th:replace="fragments/topPanelControl :: panel" />
+</section>
+<section class="card_center">
+  <form id="redirectClientsViewForm" th:action="@{/clients}" method="get">
+  </form>
+  <div class="card">
+    <div>
+      <div class="table_entry_control_panel">
+        <button class="button_panel" id="showWindowAddContactBtn">Добавить контакт</button>
+        <button class="button_panel" id="closeClientCardBtn">Выйти</button>
+      </div>
+    </div>
+    <table >
+        <h4>Клиент:</h4>
+      <thead>
+      <tr>
+        <th>ФИО</th>
+        <th>Дата рождения</th>
+        <th>Возраст, лет</th>
+      </tr>
+      <thead/>
+      <tbody>
+      <tr>
+        <td>
+          <label th:text="*{client.getSurname()}"></label>
+          <label th:text="*{client.getName()}"></label>
+        </td>
+        <td>
+          <label th:text="*{client.getDateOfBirth()}"></label>
+        </td>
+        <td>
+          <label th:text="*{client.getAge()}"></label>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <h4>Контакты:</h4>
+    <table >
+      <thead>
+      <tr>
+        <th>Название</th>
+        <th>Телефон</th>
+      </tr>
+      <thead/>
+      <tbody th:each="contact:*{client.getContactSet()}">
+      <tr>
+        <td>
+          <label th:text="*{contact.getName()}"></label>
+        </td>
+        <td>
+          <label th:text="*{contact.getPhone()}"></label>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<dialog id="modalWindowContactAdd">
+  <div>
+    Новый контак:
+      <form id="addContactForm" th:action="@{/clientCard/addContact}" method="post">
+        <input type="hidden" name="clientId" th:value="*{client.getId()}"/>
+        <div class="div_input">
+          <label>Название:</label><input id="contactName_input" name="contactName"   placeholder="Название контакта"  required/>
+          <label>Телефон:</label><input id="phone_input" name="phone"   placeholder="Телефон"  required/>
+        </div>
+      </form>
+    <div class="table_entry_control_panel">
+      <button class="button_panel" id="buttonAddContact">Добавить</button>
+      <button class="button_panel" id="buttonModalWindowAddContactClose">Выйти</button>
+    </div>
+  </div>
+</dialog>
+<script  type="module"  th:src="@{js/clientCardViewJS.js}"></script>
+</body>
+</html>

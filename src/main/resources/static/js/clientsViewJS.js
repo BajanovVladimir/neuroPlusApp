@@ -19,3 +19,11 @@ addClientBtn.addEventListener('click', () => {
    formAddClient.submit();
 });
 //------------------------------End client add-----------------
+
+//-----------------Employee card show-----------------------------------------------
+
+const showClientCardBtn = document.querySelector('#buttonOpenClientCard');
+const clientsForm = document.querySelector('#clientsForm');
+
+submitFormIfRadioButtonSelected('clientId', clientsForm, showClientCardBtn);
+//-------------------End Employee card show------------------------------------------

@@ -22,6 +22,11 @@ public class Contact {
 
 
     public Contact(){}
+    public Contact(String name, String phone, Client client){
+        this.name = name;
+        this.phone = phone;
+        this.client = client;
+    }
 
     public int getId() {
         return id;

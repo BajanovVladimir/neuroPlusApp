@@ -31,7 +31,6 @@ public class EmployeeCardViewController {
         ModelAndView mv = new ModelAndView("/employees/employeeCardView");
         mv.addObject("personName", personUser.getName());
         mv.addObject("employee", employee);
-        mv.addObject("employeeId", employeeId);
         mv.addObject("serviceList", servicesOurService.getCurrentServices());
         return mv;
     }

@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added display of the client list to the view">
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added remove service of employee">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientCardViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientCardViewJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientCardView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/employees/service/EmployeesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/employeeCardViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeeCardViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -408,6 +412,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added display of the client list to the view" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientCardViewController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="ru.bazhanov.identification.model.User" memberName="login" />

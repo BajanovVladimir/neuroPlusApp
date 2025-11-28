@@ -13,7 +13,7 @@
     <form id="redirectEmployeesViewForm" th:action="@{/employees}" method="get">
     </form>
     <form id="deleteEmployeeForm" th:action="@{/employees/delete}" method="post">
-        <input type="hidden" name="employeeId" th:value="${employeeId}"/>
+        <input type="hidden" name="employeeId" th:value="*{employee.getId()}"/>
     </form>
     <div class="card">
         <div>
@@ -30,7 +30,7 @@
         <button id="serviceAddBtn">Добавить</button>
         <button id="serviceRemoveBtn">Удалить</button>
         <form id="removeServiceForm" th:action="@{/employeeCard/serviceRemove}" method="post">
-            <input type="hidden" name="employeeId" th:value="${employeeId}"/>
+            <input type="hidden" name="employeeId" th:value="*{employee.getId()}"/>
             <div th:each="service:${employee.getServiceSet}">
                 <input type="radio"  name="serviceRemoveId" th:value="*{service.getId()}"/>
                 <label th:text="*{service.getName()}"></label>
@@ -42,7 +42,7 @@
     <div>
         Услуги:
         <form id="serviceAddForm" th:action="@{/employeeCard/serviceAdd}">
-            <input type="hidden" name="employeeId" th:value="${employeeId}"/>
+            <input type="hidden" name="employeeId" th:value="*{employee.getId()}"/>
             <div th:each="service:${serviceList}">
                 <div>
                     <input type="radio" id="*{service.getId()}" name="serviceId" th:value="*{service.getId()}"/>
