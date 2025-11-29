@@ -12,7 +12,10 @@
         <div class="table_entry_control_panel">
             <button id="buttonAdd" class="button_panel">Добавить</button>
             <button id="buttonOpenWindowDelete" class="button_panel">Удалить</button>
+            <button id="buttonCanсel" class="button_panel">Выйти</button>
         </div>
+        <form id="cancelForm" th:action="@{/}" method="get">
+        </form>
         <form id="servicesForm" th:action="@{/services/delete}" method="post">
             <table >
                 <caption>
@@ -21,8 +24,8 @@
                 <thead>
                 <tr>
                     <th>Название</th>
-                    <th> Продолжительность, мин</th>
-                    <th> Цена, руб </th>
+                    <th>Продолжительность, мин</th>
+                    <th>Цена, руб</th>
                 </tr>
                 <thead/>
                 <tbody th:each="service:${serviceList}">

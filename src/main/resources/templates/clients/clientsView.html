@@ -12,7 +12,10 @@
         <div class="table_entry_control_panel">
             <button id="buttonAdd" class="button_panel">Добавить</button>
             <button id="buttonOpenClientCard" class="button_panel">Карточка клиента</button>
+            <button id="buttonCanсel" class="button_panel">Выйти</button>
         </div>
+        <form id="cancelForm" th:action="@{/}" method="get">
+        </form>
         <form id="clientsForm" th:action="@{/clientCard}" method="get">
             <table >
                 <caption>

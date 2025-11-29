@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added remove service of employee">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/clients/ClientCardViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientCardViewJS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientCardView.html" afterDir="false" />
+    <list default="true" id="495d8099-ed56-4bee-bae2-42378a9a9e3f" name="Changes" comment="Added adding a contact to the Client.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/clients/service/ClientsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/project/model/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/employees/EmployeeCardViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/clientsViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/employeesViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/employeesViewJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/servicesViewJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients/clientsView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeeCardView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employeesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employeesView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/servicesView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1761922234997</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added adding a contact to the Client.">
+      <created>1764344115885</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764344115885</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,7 +413,8 @@
     <MESSAGE value="Created method addClient in ClientsViewController" />
     <MESSAGE value="Created a client addition." />
     <MESSAGE value="Added display of the client list to the view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added display of the client list to the view" />
+    <MESSAGE value="Added adding a contact to the Client." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added adding a contact to the Client." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

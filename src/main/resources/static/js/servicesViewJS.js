@@ -35,3 +35,11 @@ modalWindowShowIfRadioButtonSelected(modalDeleteWindow, 'serviceId', showDialogD
 modalWindowClose(closeModalDeleteWindowBtn,modalDeleteWindow);
 modalWindowSubmit(submitServiceDeleteBtn,'servicesForm');
 //---------------------End Service delete-------------------------------
+//----------------------------Cancel------------------------------------
+const buttonCanсel = document.querySelector('#buttonCanсel');
+const cancelForm = document.querySelector('#cancelForm');
+
+buttonCanсel.addEventListener('click', () => {
+  cancelForm.submit();
+});
+//------------------------End Cancel------------------------------------

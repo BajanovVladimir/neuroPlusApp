@@ -24,3 +24,12 @@ const showEmployeeCardBtn = document.querySelector('#buttonOpenEmployeeCard');
 const employeesForm = document.querySelector('#employeesForm');
 
 submitFormIfRadioButtonSelected('employeeId', employeesForm, showEmployeeCardBtn);
+//----------------End Employee card show--------------------------------------------
+//----------------------------Cancel------------------------------------
+const buttonCanсel = document.querySelector('#buttonCanсel');
+const cancelForm = document.querySelector('#cancelForm');
+
+buttonCanсel.addEventListener('click', () => {
+  cancelForm.submit();
+});
+//------------------------End Cancel------------------------------------

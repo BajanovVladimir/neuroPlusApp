@@ -27,3 +27,11 @@ const clientsForm = document.querySelector('#clientsForm');
 
 submitFormIfRadioButtonSelected('clientId', clientsForm, showClientCardBtn);
 //-------------------End Employee card show------------------------------------------
+//----------------------------Cancel------------------------------------
+const buttonCanсel = document.querySelector('#buttonCanсel');
+const cancelForm = document.querySelector('#cancelForm');
+
+buttonCanсel.addEventListener('click', () => {
+  cancelForm.submit();
+});
+//------------------------End Cancel------------------------------------
